@@ -14,17 +14,17 @@
     <section class="register-photo" style="padding: 0px;margin: 0px;background: rgb(241, 247, 252);color: rgb(241, 247, 252);">
         <div class="form-container">
             <div class="image-holder"></div>
-            <form action="ciclo2.php">
+            <form method="POST" action="server/dbm.php">
                 <h2 class="text-left">Crear&nbsp;cuenta.</h2>
                 <div class="form-group"><input class="form-control" type="email" id="Correo" name="Correo" placeholder="Correo" required=""></div>
                 <div class="form-group"><input class="form-control" type="password" id="Contraseña" name="Contraseña" placeholder="Contraseña" required=""></div>
                 <div class="form-group"><input class="form-control" type="password" id="Confirmar-Contraseña" name="Confirmar-Contraseña" placeholder="Confirmar contraseña" required=""></div>
                 <div class="form-group">
-                    <div class="form-check"><label class="form-check-label d-inline"><input class="form-check-input" type="checkbox" required="" name="AceptarTerminos" value="terminosCondiciones">Acepto&nbsp;<a class="text-primary d-inline-block already" href="termsadconditions.html"><span style="text-decoration: underline;">Términos y Condiciones.</span></a></label></div>
+                    <div class="form-check"><label class="form-check-label d-inline"><input class="form-check-input" type="checkbox" required="" name="AceptarTerminos" value="terminosCondiciones">Acepto&nbsp;<a class="text-primary d-inline-block already" href="termsadconditions.phtml"><span style="text-decoration: underline;">Términos y Condiciones.</span></a></label></div>
                 </div>
                 <div class="form-group"><button class="btn btn-primary btn-block" id="submit" type="submit">Sign in</button>
                     <div class="form-check"><label class="form-check-label d-inline"><input class="form-check-input" type="checkbox" name="Recordar" value="Recuerdame">Recuerdame&nbsp;</label></div>
-                </div><a class="text-primary already" href="login.html">Ya tienes una cuenta? Haz Log in aquí.</a>
+                </div><a class="text-primary already" href="login.phtml">Ya tienes una cuenta? Haz Log in aquí.</a>
             </form>
         </div>
     </section>
