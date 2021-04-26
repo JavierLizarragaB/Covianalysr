@@ -32,17 +32,17 @@
     $stmt3->execute([$email]);
     $id = $stmt3->fetch();
     $stmt4 = $pdo->prepare("SELECT * FROM encuesta WHERE ID_Usuario=?");
-    $stmt4->execute([$id]); 
+    $stmt4->execute([$id['ID_Usuario']]); 
     $answered = $stmt4->fetch();
     $stmt5 = $pdo->prepare("SELECT * FROM datos_personales WHERE ID_Usuario=?");
-    $stmt5->execute([$id]); 
+    $stmt5->execute([$id['ID_Usuario']]); 
     $answered2 = $stmt5->fetch();
 
     if ($user and $verified) {
         session_start();
         $_SESSION["ID_Usuario"] = $id['ID_Usuario'];
         
-        if($answered and $answered2){
+        if($answered['ID_Usuario']==$_SESSION["ID_Usuario"] and $answered2['ID_Usuario']==$_SESSION["ID_Usuario"]){
             header("Location: charts.html");
         }else{
             header("Location: forms.html");
