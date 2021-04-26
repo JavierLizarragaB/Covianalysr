@@ -52,19 +52,19 @@
         $sv->execute();
 
         $sqlP21 = "INSERT INTO encuesta (ID_Usuario, ID_Preguntas, Respuesta) VALUES ('$id', '2-1', '$pregunta2_1')";
-        $sv = $pdo->prepare($sqlP1);
+        $sv = $pdo->prepare($sqlP21);
         $sv->execute();
-        foreach( htmlspecialchars($_GET["2-pregunta2"]) as $pregunta2_2){
+        foreach( $_GET["2-pregunta2"] as $pregunta2_2){
             $sqlP22 = "INSERT INTO encuesta (ID_Usuario, ID_Preguntas, Respuesta) VALUES ('$id', '2-2', '$pregunta2_2')";
             $sv = $pdo->prepare($sqlP22);
             $sv->execute();
         }
-        foreach( htmlspecialchars($_GET["2-pregunta3"]) as $pregunta2_3){
+        foreach( $_GET["2-pregunta3"] as $pregunta2_3){
             $sqlP23 = "INSERT INTO encuesta (ID_Usuario, ID_Preguntas, Respuesta) VALUES ('$id', '2-3', '$pregunta2_3')";
             $sv = $pdo->prepare($sqlP23);
             $sv->execute();
         }
-        foreach( htmlspecialchars($_GET["2-pregunta4"]) as $pregunta2_4){
+        foreach( $_GET["2-pregunta4"] as $pregunta2_4){
             $sqlP24 = "INSERT INTO encuesta (ID_Usuario, ID_Preguntas, Respuesta) VALUES ('$id', '2-4', '$pregunta2_4')";
             $sv = $pdo->prepare($sqlP24);
             $sv->execute();
@@ -76,17 +76,17 @@
         $sqlP31 = "INSERT INTO encuesta (ID_Usuario, ID_Preguntas, Respuesta) VALUES ('$id', '3-1', '$pregunta3_1')";
         $sv = $pdo->prepare($sqlP31);
         $sv->execute();
-        foreach( htmlspecialchars($_GET["3-pregunta2"]) as $pregunta3_2){
+        foreach( $_GET["3-pregunta2"] as $pregunta3_2){
             $sqlP32 = "INSERT INTO encuesta (ID_Usuario, ID_Preguntas, Respuesta) VALUES ('$id', '3-2', '$pregunta3_2')";
             $sv = $pdo->prepare($sqlP32);
             $sv->execute();
         }
-        foreach( htmlspecialchars($_GET["3-pregunta3"]) as $pregunta2_3){
+        foreach( $_GET["3-pregunta3"] as $pregunta3_3){
             $sqlP33 = "INSERT INTO encuesta (ID_Usuario, ID_Preguntas, Respuesta) VALUES ('$id', '3-3', '$pregunta3_3')";
             $sv = $pdo->prepare($sqlP33);
             $sv->execute();
         }
-        foreach( htmlspecialchars($_GET["3-pregunta4"]) as $pregunta2_4){
+        foreach( $_GET["3-pregunta4"] as $pregunta3_4){
             $sqlP34 = "INSERT INTO encuesta (ID_Usuario, ID_Preguntas, Respuesta) VALUES ('$id', '3-4', '$pregunta3_4')";
             $sv = $pdo->prepare($sqlP34);
             $sv->execute();
@@ -104,12 +104,12 @@
         $sqlP41 = "INSERT INTO encuesta (ID_Usuario, ID_Preguntas, Respuesta) VALUES ('$id', '4-1', '$pregunta4_1')";
         $sv = $pdo->prepare($sqlP41);
         $sv->execute();
-        foreach( htmlspecialchars($_GET["4-pregunta2"]) as $pregunta4_2){
+        foreach( $_GET["4-pregunta2"] as $pregunta4_2){
             $sqlP42 = "INSERT INTO encuesta (ID_Usuario, ID_Preguntas, Respuesta) VALUES ('$id', '4-2', '$pregunta4_2')";
             $sv = $pdo->prepare($sqlP42);
             $sv->execute();
         }
-        foreach( htmlspecialchars($_GET["4-pregunta3"]) as $pregunta4_3){
+        foreach( $_GET["4-pregunta3"] as $pregunta4_3){
             $sqlP43 = "INSERT INTO encuesta (ID_Usuario, ID_Preguntas, Respuesta) VALUES ('$id', '4-3', '$pregunta4_3')";
             $sv = $pdo->prepare($sqlP43);
             $sv->execute();
