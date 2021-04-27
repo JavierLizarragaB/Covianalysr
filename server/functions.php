@@ -26,7 +26,7 @@
     function userExists($conn, $email){
         $sql = "SELECT * FROM usuarios WHERE Correo = ?;";
         $stmt = mysqli_stmt_init($conn);
-        if (!mysql_stmt_prepare($stmt, $sql)){
+        if (!mysqli_stmt_prepare($stmt, $sql)){
             header("location: ../signin.phtml?error=stmtfailed");
             exit();
         }
@@ -36,7 +36,7 @@
 
         $result = mysqli_stmt_get_result($stmt);
 
-        if ($row = mysqli_fetch_assoc($resultData)){
+        if ($row = mysqli_fetch_assoc($result)){
             return $row;
         }else{
             return false;
@@ -48,14 +48,14 @@
     function createUser($conn, $email, $passwrd){
         $sql = "INSERT INTO usuarios (Correo, Password_Hashed, Rights) VALUES (?, ?, ?);";
         $stmt = mysqli_stmt_init($conn);
-        if (!mysql_stmt_prepare($stmt, $sql)){
+        if (!mysqli_stmt_prepare($stmt, $sql)){
             header("location: ../signin.phtml?error=stmtfailed");
             exit();
         }
 
         $hashedPassword = password_hash($passwrd, PASSWORD_DEFAULT);
 
-        $rights = "1"
+        $rights = "1";
         mysqli_stmt_bind_param($stmt, "sss", $email, $hashedPassword, $rights);
         mysqli_stmt_execute($stmt);
         mysqli_stmt_close($stmt);
