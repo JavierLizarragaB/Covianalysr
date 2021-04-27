@@ -22,6 +22,7 @@
         <p style=”text-align: justify;” align="center"></br>Para ver los resultados hasta el momento apoyanos realizando la encuesta</p>
         <p align="center">
         <a class="btn btn-primary" role="button" style="background: rgb(244, 71, 107);" href="signin.php">Participar</a></p>
+        <a href="AboutUs.php" class="">About Us</a> <br>
     </div>
 
     </div>
@@ -30,4 +31,7 @@
     
 </body>
 
+<footer>
+    &copy; PK Global 2021
+</footer>
 </html>
