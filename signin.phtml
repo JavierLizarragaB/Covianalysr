@@ -27,7 +27,38 @@
                 </div><a class="text-primary already" href="login.phtml">Ya tienes una cuenta? Haz Log in aquí.</a>
             </form>
         </div>
+        <?php 
+            if (isset($_GET["error"])) {
+                if ($_GET["error"] == "emptyinput"){
+                    echo "<p>Porfavor llene todos los campos</p>"
+                } else if ($_GET["error"] == "invalidemail"){
+                    echo "<p>Direccion de correo no valido</p>"
+                } else if ($_GET["error"] == "passwordsdontmatch"){
+                    echo "<p>Las contrasenas no coinciden</p>"
+                } else if ($_GET["error"] == "userexists"){
+                    echo "<p>Este correo ya fue utilizado</p>"
+                } else if ($_GET["error"] == "stmtfailed"){
+                    echo "<p>Algo salio mal, porfavor intente mas tarde</p>"
+                }
+            }
+        ?>
     </section>
+
+    <?php 
+        if (isset($_GET["error"])) {
+            if ($_GET["error"] == "emptyinput"){
+                echo "<p>Porfavor llene todos los campos</p>"
+            } else if ($_GET["error"] == "invalidemail"){
+                echo "<p>Direccion de correo no valido</p>"
+            } else if ($_GET["error"] == "passwordsdontmatch"){
+                echo "<p>Las contrasenas no coinciden</p>"
+            } else if ($_GET["error"] == "userexists"){
+                echo "<p>Este correo ya fue utilizado</p>"
+            } else if ($_GET["error"] == "stmtfailed"){
+                echo "<p>Algo salio mal, porfavor intente mas tarde</p>"
+            }
+        }
+    ?>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/pasword.js"></script>

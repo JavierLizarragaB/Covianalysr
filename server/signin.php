@@ -32,5 +32,6 @@
 
     }else{
         header("location: ../signin.phtml")
+        exit();
     }
 ?>
