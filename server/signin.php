@@ -1,6 +1,7 @@
 <?php
+    include_once 'dbm.php';
 
-$email = htmlspecialchars($_GET["Correo"]);
+    $email = htmlspecialchars($_GET["Correo"]);
     $stmt = $pdo->prepare("SELECT * FROM usuarios WHERE Correo=?");
     $stmt->execute([$email]); 
     $user = $stmt->fetch();
