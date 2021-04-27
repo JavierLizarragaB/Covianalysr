@@ -2,7 +2,11 @@
 <html lang="en">
 
 <?php
-
+    session_start();
+    if(!isset($_SESSION["ID_Usuario"])){
+        header("location: login.php");
+    exit();
+    }
 ?>
 
 <head>
@@ -17,6 +21,13 @@
 <body  style="background: rgb(241, 247, 252);">
     <div  style="margin: 25px;background: rgb(255,255,255);padding: 20px;border-radius: 15px;">
         <h1 style="background: transparent;margin-left: 0px;padding-left: 0px;">Queremos saber sobre ti</h1>
+                <?php 
+                    if (isset($_GET["error"])) {
+                        if ($_GET["error"] == "stmtfailed"){
+                            echo "<p class='Error'>*Algo salio mal, porfavor intente mas tarde</p>";
+                        }
+                    }
+                ?>
         <form style="padding: 25px;" name="myForm" onsubmit="return ifEmpty()" method="POST" action="server/form.php">
             <h1 style="font-size: 24px;color: rgb(80, 94, 108);">Genero:</h1>
             <p id="ERRpregunta1" class="Error"></p>
@@ -312,7 +323,7 @@
                 <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-163" name="4-pregunta4" value="Permaneció igual que antes"><label class="form-check-label" for="formCheck-163">Permaneció igual que antes</label></div>
                 <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-164" name="4-pregunta4" value="Disminuyo"><label class="form-check-label" for="formCheck-164">Disminuyo</label></div>
             </div>
-            <button class="btn btn-primary btn-block col-md-2" type="submit">Entregar</button>
+            <button class="btn btn-primary btn-block col-md-2" type="submit" name="submit">Entregar</button>
         </form>
     </div>
     <script>

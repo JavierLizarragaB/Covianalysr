@@ -120,4 +120,35 @@
             }
         }
     }
+
+    function personalFormResponse($conn, $id, $edad, $ingreso, $estudios, $localidad, $est_civil, $genero, $ocupacion){
+        $sql = "INSERT INTO datos_personales (ID_Usuario, Edad, Ingresos, Estudios, Localidad, Estado_Civil, Genero, Ocupacion) VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
+        $stmt = mysqli_stmt_init($conn);
+        if (!mysqli_stmt_prepare($stmt, $sql)){
+            header("location: ../form.php?error=stmtfailed");
+            exit();
+        }
+
+        mysqli_stmt_bind_param($stmt, "ssssssss", $id, $edad, $ingreso, $estudios, $localidad, $est_civil, $genero, $ocupacion);
+        mysqli_stmt_execute($stmt);
+        mysqli_stmt_close($stmt);
+    }
+
+    function formResponse($conn, $pregunta, $preguntaId, $id){
+        $sql = "INSERT INTO encuesta (ID_Usuario, ID_Preguntas, Respuesta) VALUES (?, ?, ?);";
+        $stmt = mysqli_stmt_init($conn);
+        if (!mysqli_stmt_prepare($stmt, $sql)){
+            header("location: ../form.php?error=stmtfailed");
+            exit();
+        }
+
+        mysqli_stmt_bind_param($stmt, "sss", $id, $preguntaId, $pregunta);
+        mysqli_stmt_execute($stmt);
+        mysqli_stmt_close($stmt);
+    }
+
+    function endForm(){
+        header("location: ../charts.php");
+        exit();
+    }
 ?>
