@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" style="background: url(&quot;assets/img/fondoA.jpg&quot;) center / cover no-repeat;">
+<html lang="en" >
 
 <head>
     <meta charset="utf-8">
@@ -12,8 +12,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
-<body style="margin: 95px;padding: 0px;border-radius: 10px;background: rgb(241, 247, 252);">
-    <div class="container">
+<body style="background: url(&quot;assets/img/fondoA.jpg&quot;) center / cover no-repeat;padding: 80px;">
+    <div class="container" style="padding: 0px;">
     <div  class="jumbotron" style="margin: 0px;padding: 32px;background: rgb(255, 255, 255);color: rgb(80, 94, 108);">
         <h1>Bienvenido a Coronanalyst</h1>
         <p style=”text-align: justify;”></br>
