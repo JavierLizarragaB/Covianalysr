@@ -35,7 +35,7 @@
                 <div class="col-md-8 abt-right">
                     <h1 class="text-center">About us</h1>
                     <p><br>PK is the experience engineering firm. Together, with the world’s most customer-obsessed companies, we combine great design and strong tech to create pioneering experiences that accelerate outcomes for your customers, partners, and employees. Through cutting-edge technology and a commitment to deep craftsmanship, we help our clients run the future.<br><br></p>
-                    <p align="right"><a class="btn btn-primary abt-right-btn" role="button"  href="index.phtml">Home</a></p>
+                    <p align="right"><a class="btn btn-primary abt-right-btn" role="button"  href="index.php">Home</a></p>
                 </div>
             </div>
         </div>

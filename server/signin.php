@@ -9,29 +9,29 @@
         include_once 'functions.php';
 
         if (emptyInputSignup($email, $passwrd, $passwrdRep) != false){
-            header("location: ../signin.phtml?error=emptyinput");
+            header("location: ../signin.php?error=emptyinput");
             exit();
         }
 
         if (invalidEmail($email) != false){
-            header("location: ../signin.phtml?error=invalidemail");
+            header("location: ../signin.php?error=invalidemail");
             exit();
         }
 
         if (pwdMatch($passwrd, $passwrdRep) != false){
-            header("location: ../signin.phtml?error=passwordsdontmatch");
+            header("location: ../signin.php?error=passwordsdontmatch");
             exit();
         }
 
         if (userExists($conn, $email) != false){
-            header("location: ../signin.phtml?error=userexists");
+            header("location: ../signin.php?error=userexists");
             exit();
         }
 
         createUser($conn, $email, $passwrd);
 
     }else{
-        header("location: ../signin.phtml")
+        header("location: ../signin.php");
         exit();
     }
 ?>

@@ -7,13 +7,13 @@
         include_once 'functions.php';
 
         if (emptyInputLogin($email, $passwrd, $passwrdRep) != false){
-            header("location: ../login.phtml?error=emptyinput");
+            header("location: ../login.php?error=emptyinput");
             exit();
         }
 
         loginUser($conn, $email, $passwrd);
     }else{
-        header("location: ../login.phtml")
+        header("location: ../login.php");
         exit();
     }
 ?>

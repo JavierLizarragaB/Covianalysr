@@ -16,25 +16,26 @@
             <div id="log-in" class="image-holder"></div>
             <form method="POST" action="server/login.php">
                 <h2 class="text-left">Ingresar a cuenta.</h2>
-                <div class="form-group"><input class="form-control" type="email" name="Correo" placeholder="Correo" required=""></div>
-                <div class="form-group"><input class="form-control" type="password" name="Contraseña" placeholder="Contraseña" required=""></div>
+                <?php 
+                    if (isset($_GET["error"])) {
+                        if ($_GET["error"] == "emptyinput"){
+                            echo "<p class='Error'>*Porfavor llene todos los campos</p>";
+                        } else if ($_GET["error"] == "wronglogin"){
+                            echo "<p class='Error'>*Correo o contrasena incorrectos</p>";
+                        } else if ($_GET["error"] == "stmtfailed"){
+                            echo "<p class='Error'>*Algo salio mal, porfavor intente mas tarde</p>";
+                        }
+                    }
+                ?>
+                <div class="form-group"><input class="form-control" type="text" name="Correo" placeholder="Correo"></div>
+                <div class="form-group"><input class="form-control" type="password" name="Contraseña" placeholder="Contraseña"></div>
                 <div class="form-group"><a class="text-right text-primary already" href="#">Olvide mi contraseña</a></div>
-                <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Log in</button>
+                <div class="form-group"><button class="btn btn-primary btn-block" type="submit" name="submit">Log in</button>
                     <div class="form-check"><label class="form-check-label d-inline"><input class="form-check-input" type="checkbox" name="Recordar" value="Recuerdame">Recuerdame&nbsp;</label></div>
-                </div><a class="text-primary already" href="signin.html">No tienes una cuenta? Haz Sign in aquí.</a>
+                </div><a class="text-primary already" href="signin.php">No tienes una cuenta? Haz Sign in aquí.</a>
             </form>
         </div>
-        <?php 
-            if (isset($_GET["error"])) {
-                if ($_GET["error"] == "emptyinput"){
-                    echo "<p>Porfavor llene todos los campos</p>"
-                } else if ($_GET["error"] == "wronglogin"){
-                    echo "<p>Correo o contrasena incorrectos</p>"
-                } else if ($_GET["error"] == "stmtfailed"){
-                    echo "<p>Algo salio mal, porfavor intente mas tarde</p>"
-                }
-            }
-        ?>
+        
     </section>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>

@@ -27,7 +27,7 @@
         $sql = "SELECT * FROM usuarios WHERE Correo = ?;";
         $stmt = mysqli_stmt_init($conn);
         if (!mysqli_stmt_prepare($stmt, $sql)){
-            header("location: ../signin.phtml?error=stmtfailed");
+            header("location: ../signin.php?error=stmtfailed");
             exit();
         }
 
@@ -49,7 +49,7 @@
         $sql = "INSERT INTO usuarios (Correo, Password_Hashed, Rights) VALUES (?, ?, ?);";
         $stmt = mysqli_stmt_init($conn);
         if (!mysqli_stmt_prepare($stmt, $sql)){
-            header("location: ../signin.phtml?error=stmtfailed");
+            header("location: ../signin.php?error=stmtfailed");
             exit();
         }
 
@@ -59,7 +59,7 @@
         mysqli_stmt_bind_param($stmt, "sss", $email, $hashedPassword, $rights);
         mysqli_stmt_execute($stmt);
         mysqli_stmt_close($stmt);
-        header("location: ../Forms.phmtl");
+        header("location: ../Forms.php");
         exit();
     }
 
@@ -75,7 +75,7 @@
         $sql = "SELECT * FROM encuesta WHERE ID_Usuario = ?;";
         $stmt = mysqli_stmt_init($conn);
         if (!mysqli_stmt_prepare($stmt, $sql)){
-            header("location: ../login.phtml?error=stmtfailed");
+            header("location: ../login.php?error=stmtfailed");
             exit();
         }
 
@@ -97,7 +97,7 @@
         $userExist = userExists($conn, $email);
 
         if ($userExist == False){
-            header("location: ../login.phmtl?error=wronglogin");
+            header("location: ../login.php?error=wronglogin");
             exit();
         }
 
@@ -105,17 +105,17 @@
         $checkHash = password_verify($passwrd, $hash);
 
         if ($checkHash == False){
-            header("location: ../login.phmtl?error=wronglogin");
+            header("location: ../login.php?error=wronglogin");
             exit();
         } else if ($checkHash == True){
             session_start();
             $_SESSION["ID_Usuario"] = $userExist["ID_Usuario"];
 
             if (answered($conn, $userExist["ID_Usuario"])){
-                header("location: ../charts.phtml");
+                header("location: ../charts.php");
                 exit();
             } else{
-                header("location: ../Forms.phtml");
+                header("location: ../Forms.php");
                 exit();
             }
         }

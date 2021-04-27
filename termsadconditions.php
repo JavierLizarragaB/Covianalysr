@@ -12,7 +12,9 @@
 
 <body>
     <div style="margin: 80px;">
-        <h1>Términos y condiciones</h1><span style="line-height: 10px;font-size: 11px;text-align: left;"><em>Ultimo cambio: 11/marzo/2021</em></span>
+        <h1>Términos y condiciones</h1>
+        <span style="line-height: 10px;font-size: 11px;text-align: left;">
+        <em>Ultimo cambio: 11/marzo/2021</em></span>
     </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
