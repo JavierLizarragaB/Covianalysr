@@ -1,45 +1,36 @@
 <?php
-    include_once 'dbm.php';
 
-    $email = htmlspecialchars($_GET["Correo"]);
-    $stmt = $pdo->prepare("SELECT * FROM usuarios WHERE Correo=?");
-    $stmt->execute([$email]); 
-    $user = $stmt->fetch();
-    if ($user) {
-        echo '<script>
-        redirectURL = "signin.html";
-        setTimeout("location.href = redirectURL;");
-        alert("Correo ya utilizado");</script>';
-        } else {
-        header("Location: forms.html");
-        $count = "SELECT COUNT(*) AS total from usuarios";
-        $result = $pdo->query($count);
-        $data =  $result->fetch();
-        $hash = password_hash(htmlspecialchars($_GET["Contraseña"]), PASSWORD_DEFAULT);
+    if (isset($_POST['submit'])){
+        $email = $_POST["Correo"]
+        $passwrd = $_POST["Contraseña"]
+        $passwrdRep = $_POST["Confirmar-Contraseña"]
 
-        session_start();
-        $_SESSION["ID_Usuario"] = $id['ID_Usuario'];
-        
-        $sql = "INSERT INTO usuarios (ID_Usuario, Correo, Password_Hashed, Rights) VALUES ('".htmlspecialchars($data['total'])."', '".htmlspecialchars($_GET["Correo"])."', '$hash', '1')";
-        
-        try{
-            $sv = $pdo->prepare($sql);
-            $sv->execute();
+        include_once 'dbm.php';
+        include_once 'functions.php';
 
-            $stmt3 = $pdo->prepare("SELECT ID_Usuario FROM usuarios WHERE Correo=?");
-            $stmt3->execute([$email]);
-            $id = $stmt3->fetch();
-
-            $stmt3 = $pdo->prepare("SELECT ID_Usuario FROM usuarios WHERE Correo=?");
-            $stmt3->execute([$email]);
-            $id = $stmt3->fetch();
-
-            session_start();
-            $_SESSION["ID_Usuario"] = $id['ID_Usuario'];
-
-        } catch(Exception $e) {
-            echo 'Exception -> ';
-            var_dump($e->getMessage());
+        if (emptyInputSignup($email, $passwrd, $passwrdRep) != false){
+            header("location: ../signin.phtml?error=emptyinput");
+            exit();
         }
+
+        if (invalidEmail($email) != false){
+            header("location: ../signin.phtml?error=invalidemail");
+            exit();
+        }
+
+        if (pwdMatch($passwrd, $passwrdRep) != false){
+            header("location: ../signin.phtml?error=passwordsdontmatch");
+            exit();
+        }
+
+        if (userExists($conn, $email) != false){
+            header("location: ../signin.phtml?error=emptyinput");
+            exit();
+        }
+
+        createUser($conn, $name, $email, $username, $passwrd);
+
+    }else{
+        header("location: ../signin.phtml")
     }
 ?>
