@@ -21,7 +21,7 @@
         <p style=”text-align: justify;”></br>Coronanalyst es un proyecto que nos ayudara a medir los cambios en nuestra vida cotidiana en el área de familiarización del uso de medios computacionales, demostrándonos si esta pandemia nos impulso a implementar tecnologías de una manera irreversible a nuestras rutinas. </p>
         <p style=”text-align: justify;” align="center"></br>Para ver los resultados hasta el momento apoyanos realizando la encuesta</p>
         <p align="center">
-        <a class="btn btn-primary" role="button" style="background: rgb(244, 71, 107);" href="signin.php">Participar</a></p>
+        <a class="btn btn-primary" style="background:#f4476b;border:none;" role="button" style="background: rgb(244, 71, 107);" href="signin.php">Participar</a></p>
         <a href="AboutUs.php" class="">About Us</a> <br>
     </div>
 

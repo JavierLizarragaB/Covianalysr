@@ -26,7 +26,7 @@
 </head>
 
 <body  style="background: rgb(241, 247, 252);">
-    <div  style="margin: 25px;background: rgb(255,255,255);padding: 20px;border-radius: 15px;">
+    <div  style="margin: 15%; margin-top: 5%; margin-bottom: 5%;background: rgb(255,255,255);padding: 5%; padding-left: 7%; border-radius: 15px;">
         <h1>Queremos saber sobre ti</h1>
                 <?php 
                     if (isset($_GET["error"])) {
@@ -38,14 +38,14 @@
         <form style="padding: 25px;" name="myForm" onsubmit="return ifEmpty()" method="POST" action="server/form.php">
             <h1 style="font-size: 24px;color: rgb(80, 94, 108);">Genero:</h1>
             <p id="ERRpregunta1" class="Error"></p>
-            <div class="form-group" style="padding-left: 45px;color: rgb(80, 94, 108);">
+            <div class="form-group" style="padding-left: 35px;color: rgb(80, 94, 108); font-size: 19px; margin-bottom: 10px;">
                 <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-1" name="pregunta1" value="Mujer"><label class="form-check-label" for="formCheck-1">Mujer</label></div>
                 <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-2" name="pregunta1" value="Hombre"><label class="form-check-label" for="formCheck-2">Hombre</label></div>
                 <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-3" name="pregunta1" value="Otro"><label class="form-check-label" for="formCheck-3">Otro</label></div>
             </div>
             <h1 style="font-size: 24px;color: rgb(80, 94, 108);">Edad:</h1>
             <p id="ERRpregunta2" class="Error"></p>
-            <div  class="form-group" style="padding-left: 45px;color: rgb(80, 94, 108);">
+            <div  class="form-group" style="padding-left: 35px;color: rgb(80, 94, 108); font-size: 19px; margin-bottom: 10px;">
                 <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-4" name="pregunta2" value="Menos de 15"><label class="form-check-label" for="formCheck-4">Menos de 15</label></div>
                 <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-5" name="pregunta2" value="De 15 a 20 años"><label class="form-check-label" for="formCheck-5">De 15 a 20 años</label></div>
                 <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-6" name="pregunta2" value="De 21 a 25 años"><label class="form-check-label" for="formCheck-6">De 21 a 25 años</label></div>
@@ -62,7 +62,7 @@
             </div>
             <h1 style="font-size: 24px;color: rgb(80, 94, 108);">Estado Civil:</h1>
             <p id="ERRpregunta3" class="Error"></p>
-            <div class="form-group" style="padding-left: 25px;color: rgb(80, 94, 108);">
+            <div class="form-group" style="padding-left: 35px;color: rgb(80, 94, 108); font-size: 19px; margin-bottom: 10px;">
                 <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-17" name="pregunta3" value="Soltero/a"><label class="form-check-label" for="formCheck-17">Soltero/a</label></div>
                 <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-18" name="pregunta3" value="Casado/a"><label class="form-check-label" for="formCheck-18">Casado/a</label></div>
                 <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-19" name="pregunta3" value="Divorciado/a"><label class="form-check-label" for="formCheck-19">Divorciado/a</label></div>
@@ -71,7 +71,7 @@
             </div>
             <h1 style="font-size: 24px;color: rgb(80, 94, 108);">Nivel máximo de estudios:</h1>
             <p id="ERRpregunta4" class="Error"></p>
-            <div class="form-group" style="padding-left: 25px;color: rgb(80, 94, 108);">
+            <div class="form-group" style="padding-left: 35px;color: rgb(80, 94, 108); font-size: 19px; margin-bottom: 10px;">
                 <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-22" name="pregunta4" value="No aplica"><label class="form-check-label" for="formCheck-22">No aplica</label></div>
                 <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-23" name="pregunta4" value="Primaria"><label class="form-check-label" for="formCheck-23">Primaria</label></div>
                 <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-24" name="pregunta4" value="Secundaria"><label class="form-check-label" for="formCheck-24">Secundaria</label></div>
@@ -82,7 +82,7 @@
             </div>
             <h1 style="font-size: 24px;color: rgb(80, 94, 108);">Ocupación:</h1>
             <p id="ERRpregunta5" class="Error"></p>
-            <div class="form-group" style="padding-left: 25px;color: rgb(80, 94, 108);">
+            <div class="form-group" style="padding-left: 35px;color: rgb(80, 94, 108); font-size: 19px; margin-bottom: 10px;">
                 <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-29" name="pregunta5" value="Sector industrial"><label class="form-check-label" for="formCheck-29">Sector industrial</label></div>
                 <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-30" name="pregunta5" value="Sector educativo"><label class="form-check-label" for="formCheck-30">Sector educativo</label></div>
                 <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-31" name="pregunta5" value="Sector gubernamental"><label class="form-check-label" for="formCheck-31">Sector gubernamental</label></div>
@@ -104,7 +104,7 @@
             </div>
             <h1 style="font-size: 24px;color: rgb(80, 94, 108);">Ingreso económico mensual:</h1>
             <p id="ERRpregunta6" class="Error"></p>
-            <div class="form-group" style="padding-left: 25px;color: rgb(80, 94, 108);">
+            <div class="form-group" style="padding-left: 35px;color: rgb(80, 94, 108); font-size: 19px; margin-bottom: 10px;">
                 <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-47" name="pregunta6" value="No recibo algún ingreso"><label class="form-check-label" for="formCheck-47">No recibo algún ingreso</label></div>
                 <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-48" name="pregunta6" value="Menor a 1000"><label class="form-check-label" for="formCheck-48">Menor a 1,000</label></div>
                 <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-49" name="pregunta6" value="De 1000 a 10000"><label class="form-check-label" for="formCheck-49">De 1,000 a 10,000</label></div>
@@ -154,7 +154,7 @@
             <h1 style="background: transparent;margin-left: -25px;padding-left: 0px;font-size: 30px;color: rgb(80, 94, 108);margin-top: 25px;">Antes de la pandemia...</h1>
             <h1 style="font-size: 24px;color: rgb(80, 94, 108);">¿Qué tan seguido compraba en línea?:</h1>
             <p id="ERRpregunta21" class="Error"></p>
-            <div class="form-group" style="padding-left: 25px;color: rgb(80, 94, 108);">
+            <div class="form-group" style="padding-left: 35px;color: rgb(80, 94, 108); font-size: 19px; margin-bottom: 10px;">
                 <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-53" name="2-pregunta1" value="No realizaba compras en línea"><label class="form-check-label" for="formCheck-53">No realizaba compras en línea</label></div>
                 <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-54" name="2-pregunta1" value="1 vez cada varios meses"><label class="form-check-label" for="formCheck-54">1 vez cada varios meses</label></div>
                 <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-55" name="2-pregunta1" value="De 1 a 5 veces al mes"><label class="form-check-label" for="formCheck-55">De 1 a 5 veces al mes</label></div>
@@ -163,7 +163,7 @@
             </div>
             <h1 style="font-size: 24px;color: rgb(80, 94, 108);">¿Qué plataformas utilizaba para realizar sus compras?:</h1>
             <p id="ERRpregunta22" class="Error"></p>
-            <div class="form-group" style="padding-left: 25px;color: rgb(80, 94, 108);">
+            <div class="form-group" style="padding-left: 35px;color: rgb(80, 94, 108); font-size: 19px; margin-bottom: 10px;">
                 <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-58" name="2-pregunta2[]" value="Mercado libre"><label class="form-check-label" for="formCheck-58">Mercado libre</label></div>
                 <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-59" name="2-pregunta2[]" value="Amazon"><label class="form-check-label" for="formCheck-59">Amazon<br></label></div>
                 <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-60" name="2-pregunta2[]" value="Facebook Marketplace"><label class="form-check-label" for="formCheck-60">Facebook Marketplace</label></div>
@@ -175,7 +175,7 @@
             </div>
             <h1 style="font-size: 24px;color: rgb(80, 94, 108);">¿Qué métodos de pago utilizaba para realizar sus compras en línea?:</h1>
             <p id="ERRpregunta23" class="Error"></p>
-            <div class="form-group" style="padding-left: 25px;color: rgb(80, 94, 108);">
+            <div class="form-group" style="padding-left: 35px;color: rgb(80, 94, 108); font-size: 19px; margin-bottom: 10px;">
                 <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-66" name="2-pregunta3[]" value="Tarjeta de crédito"><label class="form-check-label" for="formCheck-66">Tarjeta de crédito</label></div>
                 <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-67" name="2-pregunta3[]" value="Tarjeta de débito"><label class="form-check-label" for="formCheck-67">Tarjeta de débito<br></label></div>
                 <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-68" name="2-pregunta3[]" value="Paypal"><label class="form-check-label" for="formCheck-68">Paypal</label></div>
@@ -188,7 +188,7 @@
             </div>
             <h1 style="font-size: 24px;color: rgb(80, 94, 108);">¿En cuál de las siguientes categorías caen sus compras realizadas en línea?:</h1>
             <p id="ERRpregunta24" class="Error"></p>
-            <div class="form-group" style="padding-left: 25px;color: rgb(80, 94, 108);">
+            <div class="form-group" style="padding-left: 35px;color: rgb(80, 94, 108); font-size: 19px; margin-bottom: 10px;">
                 <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-75" name="2-pregunta4[]" value="Ropa"><label class="form-check-label" for="formCheck-75">Ropa</label></div>
                 <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-76" name="2-pregunta4[]" value="Comida a domicilio"><label class="form-check-label" for="formCheck-76">Comida a domicilio (Rappi, UberEats, etc.)<br></label></div>
                 <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-77" name="2-pregunta4[]" value="Super a domicilio"><label class="form-check-label" for="formCheck-77">Super a domicilio (víveres)</label></div>
@@ -207,7 +207,7 @@
             </div>
             <h1 style="font-size: 24px;color: rgb(80, 94, 108);">¿Cuánto tiempo estima que usaba la computadora para actividades diarias?:</h1>
             <p id="ERRpregunta25" class="Error"></p>
-            <div class="form-group" style="padding-left: 25px;color: rgb(80, 94, 108);">
+            <div class="form-group" style="padding-left: 35px;color: rgb(80, 94, 108); font-size: 19px; margin-bottom: 10px;">
                 <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-90" name="2-pregunta5" value="7 horas o más al día"><label class="form-check-label" for="formCheck-90">7 horas o más al día</label></div>
                 <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-91" name="2-pregunta5" value="De 2 a 6 horas al día"><label class="form-check-label" for="formCheck-91">De 2 a 6 horas al día</label></div>
                 <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-92" name="2-pregunta5" value="De 2 a 6 horas a la semana"><label class="form-check-label" for="formCheck-92">De 2 a 6 horas a la semana</label></div>
@@ -216,7 +216,7 @@
             <h1 style="background: transparent;margin-left: -25px;padding-left: 0px;font-size: 30px;color: rgb(80, 94, 108);margin-top: 25px;">Durante la pandemia...</h1>
             <h1 style="font-size: 24px;color: rgb(80, 94, 108);">¿Qué tan seguido compra en línea?:</h1>
             <p id="ERRpregunta31" class="Error"></p>
-            <div class="form-group" style="padding-left: 25px;color: rgb(80, 94, 108);">
+            <div class="form-group" style="padding-left: 35px;color: rgb(80, 94, 108); font-size: 19px; margin-bottom: 10px;">
                 <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-94" name="3-pregunta1" value="No realizo compras en línea"><label class="form-check-label" for="formCheck-94">No realizo compras en línea</label></div>
                 <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-95" name="3-pregunta1" value="1 vez cada varios meses"><label class="form-check-label" for="formCheck-95">1 vez cada varios meses</label></div>
                 <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-96" name="3-pregunta1" value="De 1 a 5 veces al mes"><label class="form-check-label" for="formCheck-96">De 1 a 5 veces al mes</label></div>
@@ -225,7 +225,7 @@
             </div>
             <h1 style="font-size: 24px;color: rgb(80, 94, 108);">¿Qué plataformas utiliza para realizar sus compras en línea?:</h1>
             <p id="ERRpregunta32" class="Error"></p>
-            <div class="form-group" style="padding-left: 25px;color: rgb(80, 94, 108);">
+            <div class="form-group" style="padding-left: 35px;color: rgb(80, 94, 108); font-size: 19px; margin-bottom: 10px;">
                 <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-99" name="3-pregunta2[]" value="Mercado libre"><label class="form-check-label" for="formCheck-99">Mercado libre</label></div>
                 <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-100" name="3-pregunta2[]" value="Amazon"><label class="form-check-label" for="formCheck-100">Amazon<br></label></div>
                 <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-101" name="3-pregunta2[]" value="Facebook Marketplace"><label class="form-check-label" for="formCheck-101">Facebook Marketplace</label></div>
@@ -237,7 +237,7 @@
             </div>
             <h1 style="font-size: 24px;color: rgb(80, 94, 108);">¿Qué métodos de pago utiliza para realizar sus compras en línea?:</h1>
             <p id="ERRpregunta33" class="Error"></p>
-            <div class="form-group" style="padding-left: 25px;color: rgb(80, 94, 108);">
+            <div class="form-group" style="padding-left: 35px;color: rgb(80, 94, 108); font-size: 19px; margin-bottom: 10px;">
                 <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-107" name="3-pregunta3[]" value="Tarjeta de crédito"><label class="form-check-label" for="formCheck-107">Tarjeta de crédito</label></div>
                 <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-108" name="3-pregunta3[]" value="Tarjeta de débito"><label class="form-check-label" for="formCheck-108">Tarjeta de débito<br></label></div>
                 <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-109" name="3-pregunta3[]" value="Paypal"><label class="form-check-label" for="formCheck-109">Paypal</label></div>
@@ -250,7 +250,7 @@
             </div>
             <h1 style="font-size: 24px;color: rgb(80, 94, 108);">¿En cuál de las siguientes categorías caen sus compras en línea?:</h1>
             <p id="ERRpregunta34" class="Error"></p>
-            <div class="form-group" style="padding-left: 25px;color: rgb(80, 94, 108);">
+            <div class="form-group" style="padding-left: 35px;color: rgb(80, 94, 108); font-size: 19px; margin-bottom: 10px;">
                 <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-116" name="3-pregunta4[]" value="Ropa"><label class="form-check-label" for="formCheck-116">Ropa</label></div>
                 <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-117" name="3-pregunta4[]" value="Comida a domicilio"><label class="form-check-label" for="formCheck-117">Comida a domicilio (Rappi, UberEats, etc.)<br></label></div>
                 <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-118" name="3-pregunta4[]" value="Super a domicilio"><label class="form-check-label" for="formCheck-118">Super a domicilio (víveres)</label></div>
@@ -269,7 +269,7 @@
             </div>
             <h1 style="font-size: 24px;color: rgb(80, 94, 108);">¿Cuánto tiempo estima que utiliza la computadora para actividades diarias?:</h1>
             <p id="ERRpregunta35" class="Error"></p>
-            <div class="form-group" style="padding-left: 25px;color: rgb(80, 94, 108);">
+            <div class="form-group" style="padding-left: 35px;color: rgb(80, 94, 108); font-size: 19px; margin-bottom: 10px;">
                 <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-131" name="3-pregunta5" value="7 horas o más al día"><label class="form-check-label" for="formCheck-131">7 horas o más al día</label></div>
                 <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-132" name="3-pregunta5" value="De 2 a 6 horas al día"><label class="form-check-label" for="formCheck-132">De 2 a 6 horas al día</label></div>
                 <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-133" name="3-pregunta5" value="De 2 a 6 horas a la semana"><label class="form-check-label" for="formCheck-133">De 2 a 6 horas a la semana</label></div>
@@ -277,7 +277,7 @@
             </div>
             <h1 style="font-size: 24px;color: rgb(80, 94, 108);">En promedio, ¿Cuánto dinero estima que gasta en compras en línea al mes?:</h1>
             <p id="ERRpregunta36" class="Error"></p>
-            <div class="form-group" style="padding-left: 25px;color: rgb(80, 94, 108);">
+            <div class="form-group" style="padding-left: 35px;color: rgb(80, 94, 108); font-size: 19px; margin-bottom: 10px;">
                 <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-135" name="3-pregunta6" value="Menos de 1000"><label class="form-check-label" for="formCheck-135">Menos de 1,000</label></div>
                 <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-136" name="3-pregunta6" value="De 1000 a 2500"><label class="form-check-label" for="formCheck-136">De 1,000 a 2,500</label></div>
                 <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-137" name="3-pregunta6" value="De 2500 a 5000"><label class="form-check-label" for="formCheck-137">De 2,500 a 5,000</label></div>
@@ -287,20 +287,20 @@
             </div>
             <h1 style="font-size: 24px;color: rgb(80, 94, 108);">Actualmente, ¿Compra más seguido en físico o en línea?:</h1>
             <p id="ERRpregunta37" class="Error"></p>
-            <div class="form-group" style="padding-left: 25px;color: rgb(80, 94, 108);">
+            <div class="form-group" style="padding-left: 35px;color: rgb(80, 94, 108); font-size: 19px; margin-bottom: 10px;">
                 <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-141" name="3-pregunta7" value="En físico"><label class="form-check-label" for="formCheck-141">En físico</label></div>
                 <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-142" name="3-pregunta7" value="En línea"><label class="form-check-label" for="formCheck-142">En línea</label></div>
             </div>
             <h1 style="background: transparent;margin-left: -25px;padding-left: 0px;font-size: 30px;color: rgb(80, 94, 108);margin-top: 25px;">Sobre su bienestar...</h1>
             <h1 style="font-size: 24px;color: rgb(80, 94, 108);">¿Desde que empezó la pandemia, ha presentado síntomas relacionados al COVID-19?:</h1>
             <p id="ERRpregunta41" class="Error"></p>
-            <div class="form-group" style="padding-left: 25px;color: rgb(80, 94, 108);">
+            <div class="form-group" style="padding-left: 35px;color: rgb(80, 94, 108); font-size: 19px; margin-bottom: 10px;">
                 <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-143" name="4-pregunta1" value="Si"><label class="form-check-label" for="formCheck-143">Si</label></div>
                 <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-144" name="4-pregunta1" value="No"><label class="form-check-label" for="formCheck-144">No</label></div>
             </div>
             <h1 style="font-size: 24px;color: rgb(80, 94, 108);">¿Usted sufre de alguna de las siguientes condiciones médicas?:</h1>
             <p id="ERRpregunta42" class="Error"></p>
-            <div class="form-group" style="padding-left: 25px;color: rgb(80, 94, 108);">
+            <div class="form-group" style="padding-left: 35px;color: rgb(80, 94, 108); font-size: 19px; margin-bottom: 10px;">
                 <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-145" name="4-pregunta2[]" value="Diabetes"><label class="form-check-label" for="formCheck-145">Diabetes</label></div>
                 <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-146" name="4-pregunta2[]" value="Hipertensión"><label class="form-check-label" for="formCheck-146">Hipertensión<br></label></div>
                 <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-147" name="4-pregunta2[]" value="Obesidad"><label class="form-check-label" for="formCheck-147">Obesidad</label></div>
@@ -313,7 +313,7 @@
             </div>
             <h1 style="font-size: 24px;color: rgb(80, 94, 108);">¿A causa de la pandemia usted se ha sentido relacionado con algunas de las siguientes situaciones?:<br></h1>
             <p id="ERRpregunta43" class="Error"></p>
-            <div class="form-group" style="padding-left: 25px;color: rgb(80, 94, 108);">
+            <div class="form-group" style="padding-left: 35px;color: rgb(80, 94, 108); font-size: 19px; margin-bottom: 10px;">
                 <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-154" name="4-pregunta3[]" value="Ansiedad"><label class="form-check-label" for="formCheck-154">Ansiedad</label></div>
                 <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-155" name="4-pregunta3[]" value="Estrés"><label class="form-check-label" for="formCheck-155">Estrés<br></label></div>
                 <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-156" name="4-pregunta3[]" value="Depresión"><label class="form-check-label" for="formCheck-156">Depresión</label></div>
@@ -325,12 +325,13 @@
             </div>
             <h1 style="font-size: 24px;color: rgb(80, 94, 108);">Durante la pandemia ¿Cómo ha cambiado su actividad física?:</h1>
             <p id="ERRpregunta44" class="Error"></p>
-            <div class="form-group" style="padding-left: 25px;color: rgb(80, 94, 108);">
+            <div class="form-group" style="padding-left: 35px;color: rgb(80, 94, 108); font-size: 19px; margin-bottom: 10px;">
                 <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-162" name="4-pregunta4" value="Aumentó"><label class="form-check-label" for="formCheck-162">Aumentó</label></div>
                 <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-163" name="4-pregunta4" value="Permaneció igual que antes"><label class="form-check-label" for="formCheck-163">Permaneció igual que antes</label></div>
                 <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-164" name="4-pregunta4" value="Disminuyo"><label class="form-check-label" for="formCheck-164">Disminuyo</label></div>
             </div>
-            <button class="btn btn-primary btn-block col-md-2" type="submit" name="submit">Entregar</button>
+            <br/>
+            <button class="btn btn-primary btn-block col-md-2" style="background:#f4476b;border:none;" type="submit" name="submit">Entregar</button>
         </form>
     </div>
     <script>
