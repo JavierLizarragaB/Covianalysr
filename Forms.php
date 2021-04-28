@@ -331,7 +331,7 @@
                 <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-164" name="4-pregunta4" value="Disminuyo"><label class="form-check-label" for="formCheck-164">Disminuyo</label></div>
             </div>
             <br/>
-            <button class="btn btn-primary btn-block col-md-2" style="background:#f4476b;border:none;" type="submit" name="submit">Entregar</button>
+            <button class="btn btn-primary btn-block col-md-2" style="background:#f4476b;border:none;margin: 0;float: right;" type="submit" name="submit">Entregar</button>
         </form>
     </div>
     <script>
