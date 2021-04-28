@@ -28,6 +28,9 @@
             exit();
         }
 
+        if (isset($_SESSION['ID_Usuario'])){
+            logout();
+        }
         createUser($conn, $email, $passwrd);
 
     }else{

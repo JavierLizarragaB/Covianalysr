@@ -10,7 +10,9 @@
             header("location: ../login.php?error=emptyinput");
             exit();
         }
-
+        if (isset($_SESSION['ID_Usuario'])){
+            logout();
+        }
         loginUser($conn, $email, $passwrd);
     }else{
         header("location: ../login.php");

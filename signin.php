@@ -35,7 +35,7 @@
                 <div class="form-group"><input class="form-control" type="password" id="Contraseña" name="Contraseña" placeholder="Contraseña"></div>
                 <div class="form-group"><input class="form-control" type="password" id="Confirmar-Contraseña" name="Confirmar-Contraseña" placeholder="Confirmar contraseña"></div>
                 <div class="form-group">
-                    <div class="form-check"><label class="form-check-label d-inline"><input class="form-check-input" type="checkbox" name="AceptarTerminos" value="terminosCondiciones">Acepto&nbsp;<a class="text-primary d-inline-block already" href="termsadconditions.phtml"><span style="text-decoration: underline;">Términos y Condiciones.</span></a></label></div>
+                    <div class="form-check"><label class="form-check-label d-inline"><input class="form-check-input" type="checkbox" name="AceptarTerminos" value="terminosCondiciones" require="">Acepto&nbsp;<a class="text-primary d-inline-block already" href="termsadconditions.phtml"><span style="text-decoration: underline;">Términos y Condiciones.</span></a></label></div>
                 </div>
                 <div class="form-group"><button class="btn btn-primary btn-block" id="submit" name="submit" type="submit">Sign in</button>
                     <div class="form-check"><label class="form-check-label d-inline"><input class="form-check-input" type="checkbox" name="Recordar" value="Recuerdame">Recuerdame&nbsp;</label></div>

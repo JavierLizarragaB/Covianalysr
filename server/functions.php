@@ -59,6 +59,9 @@
         mysqli_stmt_bind_param($stmt, "sss", $email, $hashedPassword, $rights);
         mysqli_stmt_execute($stmt);
         mysqli_stmt_close($stmt);
+        $userExist = userExists($conn, $email);
+        session_start();
+        $_SESSION["ID_Usuario"] = $userExist["ID_Usuario"];
         header("location: ../Forms.php");
         exit();
     }
@@ -150,5 +153,11 @@
     function endForm(){
         header("location: ../charts.php");
         exit();
+    }
+
+    function logout(){
+        session_start();
+        session_unset();
+        session_destroy();
     }
 ?>

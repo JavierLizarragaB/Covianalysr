@@ -5,7 +5,14 @@
     session_start();
     if(!isset($_SESSION["ID_Usuario"])){
         header("location: login.php");
-    exit();
+        exit();
+    }else{
+        include_once 'server/dbm.php';
+        include_once 'server/functions.php';
+        if (answered($conn, $_SESSION["ID_Usuario"])){
+            header("location: charts.php");
+            exit();
+        }
     }
 ?>
 
@@ -20,7 +27,7 @@
 
 <body  style="background: rgb(241, 247, 252);">
     <div  style="margin: 25px;background: rgb(255,255,255);padding: 20px;border-radius: 15px;">
-        <h1 style="background: transparent;margin-left: 0px;padding-left: 0px;">Queremos saber sobre ti</h1>
+        <h1>Queremos saber sobre ti</h1>
                 <?php 
                     if (isset($_GET["error"])) {
                         if ($_GET["error"] == "stmtfailed"){
@@ -31,14 +38,14 @@
         <form style="padding: 25px;" name="myForm" onsubmit="return ifEmpty()" method="POST" action="server/form.php">
             <h1 style="font-size: 24px;color: rgb(80, 94, 108);">Genero:</h1>
             <p id="ERRpregunta1" class="Error"></p>
-            <div class="form-group" style="padding-left: 25px;color: rgb(80, 94, 108);">
+            <div class="form-group" style="padding-left: 45px;color: rgb(80, 94, 108);">
                 <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-1" name="pregunta1" value="Mujer"><label class="form-check-label" for="formCheck-1">Mujer</label></div>
                 <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-2" name="pregunta1" value="Hombre"><label class="form-check-label" for="formCheck-2">Hombre</label></div>
                 <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-3" name="pregunta1" value="Otro"><label class="form-check-label" for="formCheck-3">Otro</label></div>
             </div>
             <h1 style="font-size: 24px;color: rgb(80, 94, 108);">Edad:</h1>
             <p id="ERRpregunta2" class="Error"></p>
-            <div  class="form-group" style="padding-left: 25px;color: rgb(80, 94, 108);">
+            <div  class="form-group" style="padding-left: 45px;color: rgb(80, 94, 108);">
                 <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-4" name="pregunta2" value="Menos de 15"><label class="form-check-label" for="formCheck-4">Menos de 15</label></div>
                 <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-5" name="pregunta2" value="De 15 a 20 años"><label class="form-check-label" for="formCheck-5">De 15 a 20 años</label></div>
                 <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-6" name="pregunta2" value="De 21 a 25 años"><label class="form-check-label" for="formCheck-6">De 21 a 25 años</label></div>
