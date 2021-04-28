@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>About us</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Projects-Horizontal.css">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/WOWSlider-about-us-1.css">
     <link rel="stylesheet" href="assets/css/WOWSlider-about-us-2.css">
@@ -34,8 +35,55 @@
                 </div>
                 <div class="col-md-8 abt-right">
                     <h1 class="text-center">About us</h1>
-                    <p><br>PK is the experience engineering firm. Together, with the world’s most customer-obsessed companies, we combine great design and strong tech to create pioneering experiences that accelerate outcomes for your customers, partners, and employees. Through cutting-edge technology and a commitment to deep craftsmanship, we help our clients run the future.<br><br></p>
-                    <p align="right"><a class="btn btn-primary abt-right-btn" role="button"  href="index.php">Home</a></p>
+                    <p><br>PK is the experience engineering firm. Together, with the world’s most customer-obsessed companies, we combine great design and strong tech to create pioneering experiences that accelerate outcomes for your customers, partners, and employees. Through cutting-edge technology and a commitment to deep craftsmanship, we help our clients run the future.
+                    <br><br>
+                    <a class="btn btn-primary abt-right-btn" type="button" href="index.php">Home</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="projects-horizontal">
+        <div class="container">
+            <div class="intro">
+                <h2 class="text-center">Equipo de trabajo</h2>
+                <p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae. </p>
+            </div>
+            <div class="row projects">
+                <div class="col-sm-6 item">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-5"><a href="#"><img class="img-fluid" src="assets/img/b.jpg"></a></div>
+                        <div class="col">
+                            <h3 class="name">Hassan Sharif Abbud González</h3>
+                            <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 item">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-5"><a href="#"><img class="img-fluid" src="assets/img/b.jpg"></a></div>
+                        <div class="col">
+                            <h3 class="name">Javier Lizárraga Beyles<br></h3>
+                            <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 item">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-5"><a href="#"><img class="img-fluid" src="assets/img/b.jpg"></a></div>
+                        <div class="col">
+                            <h3 class="name">Jesús Armando Valdez Mendívil<br></h3>
+                            <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 item">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-5"><a href="#"><img class="img-fluid" src="assets/img/b.jpg"></a></div>
+                        <div class="col">
+                            <h3 class="name">Robin Mari González Rodríguez<br></h3>
+                            <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -44,7 +92,5 @@
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/WOWSlider-about-us.js"></script>
 </body>
-
-<footer> &copy; PK Global 2021 </footer>
 
 </html>
