@@ -35,7 +35,7 @@
                         }
                     }
                 ?>
-        <form style="padding: 25px;" id="myForm" onsubmit="return ifEmpty()" method="POST" action="server/form.php">
+        <form style="padding: 25px;" name="myForm" id="myForm" onsubmit="return ifEmpty()" method="POST" action="server/form.php">
             <h1 style="font-size: 24px;color: rgb(80, 94, 108);">Genero:</h1>
             <p id="ERRpregunta1" class="Error"></p>
             <div class="form-group" style="padding-left: 35px;color: rgb(80, 94, 108); font-size: 19px; margin-bottom: 10px;">

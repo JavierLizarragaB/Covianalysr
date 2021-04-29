@@ -4,6 +4,11 @@
         $email = $_POST["Correo"];
         $passwrd = $_POST["Contraseña"];
         $passwrdRep = $_POST["Confirmar-Contraseña"];
+        if (isset($_POST["Recordar"])){
+            $rememberme = true;
+        }else{
+            $rememberme = false;
+        }
 
         include_once 'dbm.php';
         include_once 'functions.php';
@@ -31,7 +36,7 @@
         if (isset($_SESSION['ID_Usuario'])){
             logout();
         }
-        createUser($conn, $email, $passwrd);
+        createUser($conn, $email, $passwrd, $rememberme);
 
     }else{
         header("location: ../signin.php");

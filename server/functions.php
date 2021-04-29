@@ -45,7 +45,7 @@
         mysqli_stmt_close($stmt);
     }
 
-    function createUser($conn, $email, $passwrd){
+    function createUser($conn, $email, $passwrd, $rememberme){
         $sql = "INSERT INTO usuarios (Correo, Password_Hashed, Rights) VALUES (?, ?, ?);";
         $stmt = mysqli_stmt_init($conn);
         if (!mysqli_stmt_prepare($stmt, $sql)){
