@@ -18,4 +18,15 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
+<body>
+    <nav style="background: rgb(241, 247, 252);" class="navbar justify-content-end">
+            <form method="POST" action="AboutUs.php">
+                <button class="btn btn-primary btn-block" style="background:#f4476b;border:none;" type="submit" name="submit">About Us</button>
+            </form>
+            <form method="POST" action="server/logout.php">
+                <button class="btn btn-primary btn-block" style="background:#f4476b;border:none;" type="submit" name="submit">Log out</button>
+            </form>
+    </nav>
+</body>
+
 </html>
