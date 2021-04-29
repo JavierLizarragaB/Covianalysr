@@ -3,12 +3,25 @@
 
 <?php
     session_start();
+    include_once 'server/dbm.php';
+    include_once 'server/functions.php';
     if(!isset($_SESSION["ID_Usuario"])){
         header("location: login.php");
         exit();
+    }else if(isset($_SESSION['LAST_ACTIVITY'])){
+        if((time() - $_SESSION['LAST_ACTIVITY'] > 1800)) {
+            logout();
+
+            header("location: login.php?error=tiempofuera");
+            exit();
+        }else{
+            $_SESSION['LAST_ACTIVITY'] = time();
+            if (answered($conn, $_SESSION["ID_Usuario"])){
+                header("location: charts.php");
+                exit();
+            }
+        }
     }else{
-        include_once 'server/dbm.php';
-        include_once 'server/functions.php';
         if (answered($conn, $_SESSION["ID_Usuario"])){
             header("location: charts.php");
             exit();

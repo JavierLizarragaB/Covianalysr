@@ -81,7 +81,7 @@
                         <div class="col-md-12 col-lg-5"><a href="#"><img class="img-fluid" src="assets/img/R.jpg"></a></div>
                         <div class="col">
                             <h3 class="name">Robin Mari González Rodríguez<br></h3>
-                            <p class="description">Estudiante de ingeniería en campus Chihuahua. Cuenta con 20 años de edad y es encargada de diseño e implementación de gráficas embedidas utilizando Google Charts y de validación de requerimientos.</p>
+                            <p class="description">Estudiante de ingeniería en campus Chihuahua. Cuenta con 20 años de edad y es encargada de diseño e implementación de gráficas embedidas utilizando Google Charts y la validación de requerimientos en el sistema.</p>
                         </div>
                     </div>
                 </div>

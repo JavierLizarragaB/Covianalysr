@@ -6,7 +6,16 @@
         session_start();
         if(!isset($_SESSION["ID_Usuario"])){
             header("location: ../login.php");
-        exit();
+            exit();
+        }else if(isset($_SESSION['LAST_ACTIVITY'])){
+            if((time() - $_SESSION['LAST_ACTIVITY'] > 1800)) {
+                logout();
+    
+                header("location: ../login.php?error=tiempofuera");
+                exit();
+            }else{
+                $_SESSION['LAST_ACTIVITY'] = time();
+            }
         }
         $id=$_SESSION["ID_Usuario"];
 
