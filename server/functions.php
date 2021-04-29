@@ -160,4 +160,18 @@
         session_unset();
         session_destroy();
     }
+
+    function aboutus($conn){
+        session_start();
+        if(!isset($_SESSION["ID_Usuario"])){
+            header("location: ../index.php");
+            exit();
+        } else if (answered($conn, $_SESSION["ID_Usuario"])){
+            header("location: ../charts.php");
+            exit();
+        } else {
+            header("location: ../Forms.php");
+            exit();
+        }
+    }
 ?>
