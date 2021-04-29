@@ -63,7 +63,7 @@
                         <div class="col-md-12 col-lg-5"><a href="#"><img class="img-fluid" src="assets/img/j.jpg"></a></div>
                         <div class="col">
                             <h3 class="name">Javier Lizárraga Beyles<br></h3>
-                            <p class="description">Estudiante con 20 años de edad, 4to semestre en Campus Sonora Norte, encargado de la planificación y estructuración de la página, desarrollando Full-Stack en el proyecto con tecnologías como Bootstrap, HTML/CSS, PHP y MySQL.</p>
+                            <p class="description">Estudiante con 20 años de edad, 4to semestre en Campus Sonora Norte, encargado de la planificación y estructuración de la página, desarrollando tanto en el lado del servido como del cliente del proyecto, es decir Full-Stack, con tecnologías como Bootstrap, HTML/CSS, PHP y MySQL.</p>
                         </div>
                     </div>
                 </div>
@@ -72,7 +72,7 @@
                         <div class="col-md-12 col-lg-5"><a href="#"><img class="img-fluid" src="assets/img/A.jpg"></a></div>
                         <div class="col">
                             <h3 class="name">Jesús Armando Valdez Mendívil<br></h3>
-                            <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida.</p>
+                            <p class="description">Estudiante de 19 años en campus Sonora Norte. Encargado de aplicacion externa utilizando Unity para graficacion de datos de MySQL utilizando Json.</p>
                         </div>
                     </div>
                 </div>
