@@ -30,22 +30,22 @@ function ifEmpty(){
     var pregunta7 = document.forms["myForm"]["pregunta7"];
     
     var pregunta21 = document.getElementsByName("2-pregunta1");
-    var pregunta22 = document.getElementsByName("2-pregunta2");
-    var pregunta23 = document.getElementsByName("2-pregunta3");
-    var pregunta24 = document.getElementsByName("2-pregunta4");
+    var pregunta22 = document.getElementsByName("2-pregunta2[]");
+    var pregunta23 = document.getElementsByName("2-pregunta3[]");
+    var pregunta24 = document.getElementsByName("2-pregunta4[]");
     var pregunta25 = document.getElementsByName("2-pregunta5");
 
     var pregunta31 = document.getElementsByName("3-pregunta1");
-    var pregunta32 = document.getElementsByName("3-pregunta2");
-    var pregunta33 = document.getElementsByName("3-pregunta3");
-    var pregunta34 = document.getElementsByName("3-pregunta4");
+    var pregunta32 = document.getElementsByName("3-pregunta2[]");
+    var pregunta33 = document.getElementsByName("3-pregunta3[]");
+    var pregunta34 = document.getElementsByName("3-pregunta4[]");
     var pregunta35 = document.getElementsByName("3-pregunta5");
     var pregunta36 = document.getElementsByName("3-pregunta6");
     var pregunta37 = document.getElementsByName("3-pregunta7");
 
     var pregunta41 = document.getElementsByName("4-pregunta1");
-    var pregunta42 = document.getElementsByName("4-pregunta2");
-    var pregunta43 = document.getElementsByName("4-pregunta3");
+    var pregunta42 = document.getElementsByName("4-pregunta2[]");
+    var pregunta43 = document.getElementsByName("4-pregunta3[]");
     var pregunta44 = document.getElementsByName("4-pregunta4");
     
     if(!search(pregunta1, "ERRpregunta1")){

@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
-<body  style="background: rgb(241, 247, 252);">
+<body  style="background: url(&quot;assets/img/fondoZ.jpg&quot;)">
     <div  style="margin: 15%; margin-top: 5%; margin-bottom: 5%;background: rgb(255,255,255);padding: 5%; padding-left: 7%; border-radius: 15px;">
         <h1>Queremos saber sobre ti</h1>
                 <?php 
@@ -333,12 +333,7 @@
             <br/>
             <button class="btn btn-primary btn-block col-md-2" style="background:#f4476b;border:none;margin: 0;float: right;" type="submit" name="submit">Entregar</button>
         </form>
-    </div>
-    <script>
-    document.getElementById("myForm").addEventListener("submit", function(event){
-        event.preventDefault()
-    });
-    </script>    
+    </div>  
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/checked.js"></script>
