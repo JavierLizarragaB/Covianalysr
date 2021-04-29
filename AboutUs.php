@@ -33,7 +33,7 @@
                 </div>
                 <div class="col-md-8 abt-right">
                     <h1 class="text-center">About us</h1>
-                    <p><br>PK is the experience engineering firm. Together, with the world’s most customer-obsessed companies, we combine great design and strong tech to create pioneering experiences that accelerate outcomes for your customers, partners, and employees. Through cutting-edge technology and a commitment to deep craftsmanship, we help our clients run the future.
+                    <p><br>Al trabajar con estudiantes de campus Chihuahua, Sonora y la empresa PK Global hemos puesto gran parte del conocimiento de nuestra formación universitaria en este proyecto con el propósito de conocer más acerca de los afectados por el COVID-19. Más específicamente cuantificar en qué sentido ha afectado la pandemia a diferentes sectores y hacer posible la visualización de estos datos. Además, haber trabajado en este proyecto ha sido una oportunidad para desarrollarnos personal y profesionalmente.
                     <br><br>
                     <form method="POST" action="server/aboutus.php">
                         <button class="btn btn-primary abt-right-btn" style="background:#f4476b;border:none;" type="submit" name="submit">Regresar</button>
