@@ -4,10 +4,16 @@
         $email = $_POST["Correo"];
         $passwrd = $_POST["Contraseña"];
         $passwrdRep = $_POST["Confirmar-Contraseña"];
+        $expiration=$_POST["Recordar"];
         if (isset($_POST["Recordar"])){
             $rememberme = true;
         }else{
             $rememberme = false;
+        }
+
+        if (!isset($_POST["AceptarTerminos"])){
+            header("location: ../signin.php?error=terminos");
+            exit();
         }
 
         include_once 'dbm.php';
