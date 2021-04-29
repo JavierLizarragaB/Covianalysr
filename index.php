@@ -22,7 +22,7 @@
         <p style=”text-align: justify;” align="center"></br>Para ver los resultados hasta el momento apoyanos realizando la encuesta</p>
         <p align="center">
         <a class="btn btn-primary" style="background:#f4476b;border:none;" role="button" style="background: rgb(244, 71, 107);" href="signin.php">Participar</a></p>
-        <a href="AboutUs.php" class="">About Us</a> <br>
+        <a href="AboutUs.php" class="">Acerca de nosotros</a> <br>
     </div>
 
     </div>
