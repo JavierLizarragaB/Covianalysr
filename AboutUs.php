@@ -72,7 +72,7 @@
                         <div class="col-md-12 col-lg-5"><a href="#"><img class="img-fluid" src="assets/img/A.jpg"></a></div>
                         <div class="col">
                             <h3 class="name">Jesús Armando Valdez Mendívil<br></h3>
-                            <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida.</p>
+                            <p class="description">Estudiante de 19 años en campus Sonora Norte. Encargado de aplicacion externa utilizando Unity para graficacion de datos de MySQL utilizando Json</p>
                         </div>
                     </div>
                 </div>
