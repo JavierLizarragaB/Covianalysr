@@ -33,7 +33,7 @@
                 </div>
                 <div class="col-md-8 abt-right">
                     <h1 class="text-center">About us</h1>
-                    <p><br>Al trabajar con estudiantes de campus Chihuahua, Sonora y la empresa PK Global hemos puesto gran parte del conocimiento de nuestra formación universitaria en este proyecto con el propósito de conocer más acerca de los afectados por el COVID-19. Más específicamente cuantificar en qué sentido ha afectado la pandemia a diferentes sectores y hacer posible la visualización de estos datos. Además, haber trabajado en este proyecto ha sido una oportunidad para desarrollarnos personal y profesionalmente.
+                    <p><br>PK is the experience engineering firm. Together, with the world’s most customer-obsessed companies, we combine great design and strong tech to create pioneering experiences that accelerate outcomes for your customers, partners, and employees. Through cutting-edge technology and a commitment to deep craftsmanship, we help our clients run the future.
                     <br><br>
                     <form method="POST" action="server/aboutus.php">
                         <button class="btn btn-primary abt-right-btn" style="background:#f4476b;border:none;" type="submit" name="submit">Regresar</button>
@@ -46,7 +46,7 @@
         <div class="container">
             <div class="intro">
                 <h2 class="text-center">Equipo de trabajo</h2>
-                <p class="text-center">El equipo está conformado por estudiantes del tecnológico de monterrey de la carrera de ingeniería en tecnologías computacionales. </p>
+                <p class="text-center">El equipo está conformado por estudiantes del tecnológico de monterrey de la carrera de ingeniería en tecnologías computacionales (ITC). </p>
             </div>
             <div class="row projects">
                 <div class="col-sm-6 item">
@@ -54,7 +54,7 @@
                         <div class="col-md-12 col-lg-5"><a href="#"><img class="img-fluid" src="assets/img/H.jpg"></a></div>
                         <div class="col">
                             <h3 class="name">Hassan Sharif Abbud González</h3>
-                            <p class="description">Estudiante de ingeniería de campus Chihuahua. Al trabajar con estudiantes de campus Sonora y PK Global hemos puesto gran parte del conocimiento de nuestra formación universitaria en este proyecto con el propósito de conocer más acerca de los afectados por el COVID-19. También considero que haber trabajado en este proyecto ha sido una oportunidad para desarrollarme personal y profesionalmente.</p>
+                            <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida.</p>
                         </div>
                     </div>
                 </div>
@@ -63,7 +63,7 @@
                         <div class="col-md-12 col-lg-5"><a href="#"><img class="img-fluid" src="assets/img/j.jpg"></a></div>
                         <div class="col">
                             <h3 class="name">Javier Lizárraga Beyles<br></h3>
-                            <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida.</p>
+                            <p class="description">Estudiante con 20 años de edad, 4to semestre en Campus Sonora Norte, encargado de la planificación y estructuración de la página, desarrollando Full-Stack en el proyecto.</p>
                         </div>
                     </div>
                 </div>
