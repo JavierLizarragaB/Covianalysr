@@ -12,7 +12,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
-<body style="background: url(&quot;assets/img/fondoA.jpg&quot;) center / cover no-repeat;padding: 80px;">
+<body style="background: url(&quot;assets/img/fondoA.jpg&quot;) center / cover no-repeat;padding: 50px;">
     <div class="container" style="padding: 0px;">
     <div  class="jumbotron" style="margin: 0px;padding: 32px;background: rgb(255, 255, 255);color: rgb(80, 94, 108);">
         <h1 style="text-align: center;">Bienvenido a Coronanalyst</h1>
