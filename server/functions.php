@@ -61,7 +61,12 @@
         mysqli_stmt_close($stmt);
         $userExist = userExists($conn, $email);
         session_start();
-        $_SESSION["ID_Usuario"] = $userExist["ID_Usuario"];
+        if($rememberme){
+            $_SESSION["ID_Usuario"] = $userExist["ID_Usuario"];
+        }else{
+            $_SESSION['LAST_ACTIVITY'] = time();
+            $_SESSION["ID_Usuario"] = $userExist["ID_Usuario"];
+        }
         header("location: ../Forms.php");
         exit();
     }
@@ -96,7 +101,7 @@
         mysqli_stmt_close($stmt);
     }
 
-    function loginUser($conn, $email, $passwrd){
+    function loginUser($conn, $email, $passwrd, $rememberme){
         $userExist = userExists($conn, $email);
 
         if ($userExist == False){
@@ -112,7 +117,12 @@
             exit();
         } else if ($checkHash == True){
             session_start();
-            $_SESSION["ID_Usuario"] = $userExist["ID_Usuario"];
+            if($rememberme){
+                $_SESSION["ID_Usuario"] = $userExist["ID_Usuario"];
+            }else{
+                $_SESSION['LAST_ACTIVITY'] = time();
+                $_SESSION["ID_Usuario"] = $userExist["ID_Usuario"];
+            }
 
             if (answered($conn, $userExist["ID_Usuario"])){
                 header("location: ../charts.php");

@@ -24,6 +24,8 @@
                             echo "<p class='Error'>*Correo o contrasena incorrectos</p>";
                         } else if ($_GET["error"] == "stmtfailed"){
                             echo "<p class='Error'>*Algo salio mal, porfavor intente mas tarde</p>";
+                        } else if ($_GET["error"] == "tiempofuera"){
+                            echo "<p class='Error'>*Favor de iniciar sesion de nuevo</p>";
                         }
                     }
                 ?>
