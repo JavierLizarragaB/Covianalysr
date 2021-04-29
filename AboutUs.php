@@ -54,7 +54,7 @@
                         <div class="col-md-12 col-lg-5"><a href="#"><img class="img-fluid" src="assets/img/H.jpg"></a></div>
                         <div class="col">
                             <h3 class="name">Hassan Sharif Abbud González</h3>
-                            <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida.</p>
+                            <p class="description">Estudiante de 19 años, 4to semestre de ingeniería en campus Chihuahua. Encargado del diseño de la página con el uso de herramientas como Bootstrap y comunicación entre equipos para llegar a un estándar que se llevara a cabo en diferentes páginas.</p>
                         </div>
                     </div>
                 </div>
