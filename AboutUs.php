@@ -54,7 +54,7 @@
                         <div class="col-md-12 col-lg-5"><a href="#"><img class="img-fluid" src="assets/img/H.jpg"></a></div>
                         <div class="col">
                             <h3 class="name">Hassan Sharif Abbud González</h3>
-                            <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida.</p>
+                            <p class="description">Estudiante de ingeniería de campus Chihuahua. Al trabajar con estudiantes de campus Sonora y PK Global hemos puesto gran parte del conocimiento de nuestra formación universitaria en este proyecto con el propósito de conocer más acerca de los afectados por el COVID-19. También considero que haber trabajado en este proyecto ha sido una oportunidad para desarrollarme personal y profesionalmente.</p>
                         </div>
                     </div>
                 </div>
