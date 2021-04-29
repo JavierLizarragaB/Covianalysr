@@ -26,7 +26,7 @@
 </head>
 
 <body  style="background: url(&quot;assets/img/fondoZ.jpg&quot;)">
-    <div  style="margin: 15%; margin-top: 5%; margin-bottom: 5%;background: rgb(255,255,255);padding: 5%; padding-left: 7%; border-radius: 15px;">
+    <div  style="margin: 15%; margin-top: 5%; margin-bottom: 5%;background: rgb(255,255,255);padding: 5%; padding-left: 7%; border-radius: 20px;border-style: solid;border-color: rgb(241, 247, 252);">
         <h1>Queremos saber sobre ti</h1>
                 <?php 
                     if (isset($_GET["error"])) {
