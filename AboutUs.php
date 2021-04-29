@@ -15,11 +15,9 @@
 
 <body>
     <section class="about-us">
-        <div class="row">
             <div class="col">
-                <h1 class="text-danger text-center">PK Global</h1>
+                <h1 class="text-danger text-center" style="padding:0px;">PK Global</h1>
             </div>
-        </div>
         <div class="container">
             <div class="row padding-content">
                 <div class="col-md-4 no-padding">

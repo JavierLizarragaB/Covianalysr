@@ -3,7 +3,7 @@
         include_once 'functions.php';
         logout();
 
-        header("location: ../login.php");
+        header("location: ../index.php");
         exit();
     }else{
         header("location: ../login.php");
