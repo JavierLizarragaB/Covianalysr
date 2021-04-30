@@ -2,6 +2,7 @@
 <html lang="en">
 
 <?php
+    include_once 'server/dbm.php';
     session_start();
     include_once 'server/functions.php';
     if(!isset($_SESSION["ID_Usuario"])){
@@ -17,6 +18,71 @@
             $_SESSION['LAST_ACTIVITY'] = time();
         }
     }
+
+    $sql = "SELECT COUNT(*) AS Respuesta FROM encuesta WHERE Respuesta='Más de 10 veces al mes' AND WHERE ID_Preguntas='2-1'";
+    /*$stmt = mysqli_stmt_init($conn);
+    mysqli_stmt_prepare($stmt, $sql);
+
+    mysqli_stmt_execute($stmt);
+
+    $result = mysqli_stmt_get_result($stmt);
+    */
+    $result = $conn->query($sql);
+    $twoONEichi = $result;
+    //$twoONEichi = mysqli_fetch_assoc($result);
+    //mysqli_stmt_close($stmt);
+
+    $sql = "SELECT COUNT(*) AS Respuesta FROM encuesta WHERE Respuesta='De 6 a 10 veces al mes' AND WHERE ID_Preguntas='2-1'";
+    /*$stmt = mysqli_stmt_init($conn);
+    mysqli_stmt_prepare($stmt, $sql);
+
+    mysqli_stmt_execute($stmt);
+
+    $result = mysqli_stmt_get_result($stmt);
+    */
+    $result = $conn->query($sql);
+    $twoONEni = $result;
+    //$twoONEni = mysqli_fetch_assoc($result);
+    //mysqli_stmt_close($stmt);
+
+    $sql = "SELECT COUNT(*) AS Respuesta FROM encuesta WHERE Respuesta='De 1 a 5 veces al mes' AND WHERE ID_Preguntas='2-1'";
+    /*$stmt = mysqli_stmt_init($conn);
+    mysqli_stmt_prepare($stmt, $sql);
+
+    mysqli_stmt_execute($stmt);
+
+    $result = mysqli_stmt_get_result($stmt);
+    */
+    $result = $conn->query($sql);
+    $twoONEsan = $result;
+    //$twoONEsan = mysqli_fetch_assoc($result);
+    //mysqli_stmt_close($stmt);
+
+    $sql = "SELECT COUNT(*) AS Respuesta FROM encuesta WHERE Respuesta='1 vez cada varios meses' AND WHERE ID_Preguntas='2-1'";
+    /*$stmt = mysqli_stmt_init($conn);
+    mysqli_stmt_prepare($stmt, $sql);
+
+    mysqli_stmt_execute($stmt);
+
+    $result = mysqli_stmt_get_result($stmt);
+    */
+    $result = $conn->query($sql);
+    $twoONEyo = $result;
+    //$twoONEyo = mysqli_fetch_assoc($result);
+    //mysqli_stmt_close($stmt);
+
+    $sql = "SELECT COUNT(*) AS Respuesta FROM encuesta WHERE Respuesta='No realizaba compras en línea' AND WHERE ID_Preguntas='2-1'";
+    /*$stmt = mysqli_stmt_init($conn);
+    mysqli_stmt_prepare($stmt, $sql);
+
+    mysqli_stmt_execute($stmt);
+
+    $result = mysqli_stmt_get_result($stmt);
+    */
+    $result = $conn->query($sql);
+    $twoONEgo = $result;
+    //$twoONEgo = mysqli_fetch_assoc($result);
+    //mysqli_stmt_close($stmt);
 ?>
 
 <head>
@@ -247,16 +313,16 @@
         async: false
         }).responseText;
 
-        var data = new google.visualization.DataTable(jsonData);
+        //var data = new google.visualization.DataTable(jsonData);
 
-        /*var data = new google.visualization.arrayToDataTable([
+        var data = new google.visualization.arrayToDataTable([
             ['','Respuestas'],
-            ["Más de 10 veces por mes", 10],
-            ["10 a 6 veces al mes", 6],
-            ["5 a 1 vez al mes", 7],
-            ["1 vez cada varios meses", 11],
-            ["No realizó compras en línea", 0],
-        ]);*/
+            ["Más de 10 veces por mes", $twoONEichi],
+            ["10 a 6 veces al mes", $twoONEni],
+            ["5 a 1 vez al mes", $twoONEsan],
+            ["1 vez cada varios meses", $twoONEyo],
+            ["No realizó compras en línea", $twoONEgo],
+        ]);
 
         var options = {
             title: 'Frecuencia de compras en línea antes de la pandemia',
