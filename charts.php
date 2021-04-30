@@ -33,8 +33,7 @@
 
     google.charts.setOnLoadCallback(drawTwoAChart);
     google.charts.setOnLoadCallback(drawTwoBChart);
-    google.charts.setOnLoadCallback(drawThreeAChart);
-    google.charts.setOnLoadCallback(drawThreeBChart);
+    google.charts.setOnLoadCallback(drawThreeChart);
     google.charts.setOnLoadCallback(drawFourAChart);
     google.charts.setOnLoadCallback(drawFourBChart);
     google.charts.setOnLoadCallback(drawFiveAChart);
@@ -100,28 +99,7 @@
         chart.draw(data, options);
     }
 
-    function drawThreeAChart() {
-        var data = new google.visualization.arrayToDataTable([
-            ['Gastos', 'Respuestas'],
-            ['Menos de $1,000 MXN', 8],
-            ['$1,000 - $2,500 MXN', 2],
-            ['$2,500 - $5,000 MXN', 4],
-            ['$5,000 - $7,500 MXN', 2],
-            ['$7,500 - $10,000 MXN', 8],
-            ['Más de $10,000 MXN', 6]
-        ]);
-
-        var options = {
-            title:'Gastos mensuales en compras en línea antes de la pandemia', 
-            width:650, 
-            height:600
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('chart_threeA_div'));
-        chart.draw(data, options);
-    }
-
-    function drawThreeBChart() {
+    function drawThreeChart() {
         var data = new google.visualization.arrayToDataTable([
             ['Gastos', 'Respuestas'],
             ['Menos de $1,000 MXN', 8],
@@ -138,7 +116,7 @@
             height:600
         };
 
-        var chart = new google.visualization.PieChart(document.getElementById('chart_threeB_div'));
+        var chart = new google.visualization.PieChart(document.getElementById('chart_three_div'));
         chart.draw(data, options);
     }
 
@@ -329,16 +307,15 @@
         <td><div id="chart_twoB_div" style="border: 1px solid #ccc"></div></td>
       </tr>
       <tr>
-        <td><div id="chart_threeA_div" style="border: 1px solid #ccc"></div></td>
-        <td><div id="chart_threeB_div" style="border: 1px solid #ccc"></div></td>
-      </tr>
-      <tr>
         <td><div id="chart_fourA_div" style="border: 1px solid #ccc"></div></td>
         <td><div id="chart_fourB_div" style="border: 1px solid #ccc"></div></td>
       </tr>
       <tr>
         <td><div id="chart_fiveA_div" style="border: 1px solid #ccc"></div></td>
         <td><div id="chart_fiveB_div" style="border: 1px solid #ccc"></div></td>
+      </tr>
+      <tr>
+        <td><div id="chart_three_div" style="border: 1px solid #ccc"></div></td>
       </tr>
     </table>
 
