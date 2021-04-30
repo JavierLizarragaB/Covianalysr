@@ -45,7 +45,7 @@
         $pregunta3_1 = $_POST["3-pregunta1"];
         formResponse($conn, $pregunta3_1, "3-1", $id);
         foreach( $_POST["3-pregunta2"] as $pregunta3_2){
-            formResponse($conn, $pregunta3_1, "3-2", $id);
+            formResponse($conn, $pregunta3_2, "3-2", $id);
         }
         foreach( $_POST["3-pregunta3"] as $pregunta3_3){
             formResponse($conn, $pregunta3_3, "3-3", $id);
