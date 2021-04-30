@@ -28,8 +28,8 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
-<body>
-    <nav style="background: rgb(241, 247, 252);" class="navbar justify-content-end">
+<body align=>
+    <nav style="background: rgb(241, 247, 252);" class="navbar justify-content-end" >
             <form style="margin-right: 35px;" method="POST" action="AboutUs.php">
                 <button class="btn btn-primary btn-block" style="background:#f4476b;border:none;" type="submit" name="submit">Acerca de nosotros</button>
             </form>
@@ -39,12 +39,12 @@
             </form>
     </nav>
 
-    <div id="chart_one"></div>
-    <div id="chart_two"></div>
-    <div id="chart_three"></div>
-    <div id="chart_four"></div>
-    <div id="chart_five"></div>
-    <div id="chaart"></div>
+    <div id="chart_one" align="center"></div>
+    <div id="chart_two" align="center"></div>
+    <div id="chart_three" align="center"></div>
+    <div id="chart_four" align="center"></div>
+    <div id="chart_five" align="center"></div>
+    <div id="chaart" align="center"></div>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     
     <script type="text/javascript">
