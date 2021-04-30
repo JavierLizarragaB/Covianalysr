@@ -19,7 +19,7 @@
         }
     }
 
-    $sql = "SELECT COUNT(*) AS Respuesta FROM encuesta WHERE Respuesta='Más de 10 veces al mes' AND WHERE ID_Preguntas='2-1'";
+    //$sql = "SELECT COUNT(*) AS Respuesta FROM encuesta WHERE Respuesta='Más de 10 veces al mes' AND WHERE ID_Preguntas='2-1'";
     /*$stmt = mysqli_stmt_init($conn);
     mysqli_stmt_prepare($stmt, $sql);
 
@@ -27,8 +27,9 @@
 
     $result = mysqli_stmt_get_result($stmt);
     */
-    $result = $conn->query($sql);
-    $twoONEichi = $result;
+    //$result = $conn->query($sql);
+    //$twoONEichi = $sql;
+    //var twoONEichi = $sql;
     //$twoONEichi = mysqli_fetch_assoc($result);
     //mysqli_stmt_close($stmt);
 
@@ -40,8 +41,9 @@
 
     $result = mysqli_stmt_get_result($stmt);
     */
-    $result = $conn->query($sql);
-    $twoONEni = $result;
+    //$result = $conn->query($sql);
+    //$twoONEni = $sql;
+    //var twoONEni = $sql;
     //$twoONEni = mysqli_fetch_assoc($result);
     //mysqli_stmt_close($stmt);
 
@@ -53,8 +55,9 @@
 
     $result = mysqli_stmt_get_result($stmt);
     */
-    $result = $conn->query($sql);
-    $twoONEsan = $result;
+    //$result = $conn->query($sql);
+    //$twoONEsan = $sql;
+    //var twoONEsan = $sql;
     //$twoONEsan = mysqli_fetch_assoc($result);
     //mysqli_stmt_close($stmt);
 
@@ -66,8 +69,9 @@
 
     $result = mysqli_stmt_get_result($stmt);
     */
-    $result = $conn->query($sql);
-    $twoONEyo = $result;
+    //$result = $conn->query($sql);
+    //$twoONEyo = $sql;
+    //var twoONEyo = $sql;
     //$twoONEyo = mysqli_fetch_assoc($result);
     //mysqli_stmt_close($stmt);
 
@@ -79,8 +83,9 @@
 
     $result = mysqli_stmt_get_result($stmt);
     */
-    $result = $conn->query($sql);
-    $twoONEgo = $result;
+    //$result = $conn->query($sql);
+    //$twoONEgo = $sql;
+    //var twoONEgo = $sql;
     //$twoONEgo = mysqli_fetch_assoc($result);
     //mysqli_stmt_close($stmt);
 ?>
@@ -307,21 +312,33 @@
     google.charts.load('current', {'packages':['bar']});
     google.charts.setOnLoadCallback(drawAStuff);
     function drawAStuff() {
-        var jsonData = $.ajax({
+        /*var jsonData = $.ajax({
         url: "getdata.php",
         dataType: ".json",
         async: false
-        }).responseText;
+        }).responseText;*/
 
         //var data = new google.visualization.DataTable(jsonData);
 
+        /*a = $twoONEichi;
+        b = $twoONEni;
+        c = $twoONEsan;
+        d = $twoONEyo;
+        e = $twoONEgo;*/
+
+        var a =
+        <?php
+        $sql = "SELECT COUNT(*) AS Respuesta FROM encuesta WHERE Respuesta='Más de 10 veces al mes' AND WHERE ID_Preguntas='2-1'"; 
+        echo $sql
+        ?>;
+
         var data = new google.visualization.arrayToDataTable([
             ['','Respuestas'],
-            ["Más de 10 veces por mes", $twoONEichi],
-            ["10 a 6 veces al mes", $twoONEni],
-            ["5 a 1 vez al mes", $twoONEsan],
-            ["1 vez cada varios meses", $twoONEyo],
-            ["No realizó compras en línea", $twoONEgo],
+            ["Más de 10 veces por mes", a],
+            ["10 a 6 veces al mes", 2],
+            ["5 a 1 vez al mes", 3],
+            ["1 vez cada varios meses", 4],
+            ["No realizó compras en línea", 5],
         ]);
 
         var options = {
