@@ -1,6 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\assets",
+    "\\assets\\bootstrap",
+    "\\assets\\bootstrap\\js",
+    "\\assets\\js",
+    "\\server"
   ],
+  "SelectedNode": "\\server\\form.php",
   "PreviewInSolutionExplorer": false
 }
