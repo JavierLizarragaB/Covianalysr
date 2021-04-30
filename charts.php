@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/Registration-Form-with-Photo.css">
     <link rel="stylesheet" href="assets/css/styles.css">
-
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
     google.charts.load('current', {'packages':['corechart']});
@@ -236,19 +236,27 @@
     <div id="chart_oneA" align="center"></div>
     <div id="chart_oneB" align="center"></div>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script type="text/javascript">
     google.charts.load('current', {'packages':['bar']});
-    google.charts.setOnLoadCallback(drawStuff);
-    function drawStuff() {
-        var data = new google.visualization.arrayToDataTable([
+    google.charts.setOnLoadCallback(drawAStuff);
+    function drawAStuff() {
+        var jsonData = $.ajax({
+        url: "getdata.php",
+        dataType: ".json",
+        async: false
+        }).responseText;
+
+        var data = new google.visualization.DataTable(jsonData);
+
+        /*var data = new google.visualization.arrayToDataTable([
             ['','Respuestas'],
             ["Más de 10 veces por mes", 10],
             ["10 a 6 veces al mes", 6],
             ["5 a 1 vez al mes", 7],
             ["1 vez cada varios meses", 11],
             ["No realizó compras en línea", 0],
-        ]);
+        ]);*/
 
         var options = {
             title: 'Frecuencia de compras en línea antes de la pandemia',
@@ -271,8 +279,8 @@
 
     <script type="text/javascript">
     google.charts.load('current', {'packages':['bar']});
-    google.charts.setOnLoadCallback(drawStuff);
-    function drawStuff() {
+    google.charts.setOnLoadCallback(drawBStuff);
+    function drawBStuff() {
         var data = new google.visualization.arrayToDataTable([
             ['','Respuestas'],
             ["Más de 10 veces por mes", 10],
@@ -318,7 +326,5 @@
         <td><div id="chart_three_div" style="border: 1px solid #ccc"></div></td>
       </tr>
     </table>
-
 </body>
-
 </html>
