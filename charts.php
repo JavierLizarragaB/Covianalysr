@@ -5,6 +5,7 @@
     include_once 'server/dbm.php';
     session_start();
     include_once 'server/functions.php';
+    include_once 'server/getdata.php';
     if(!isset($_SESSION["ID_Usuario"])){
         header("location: login.php");
         exit();
@@ -18,7 +19,7 @@
             $_SESSION['LAST_ACTIVITY'] = time();
         }
     }
-
+    
     //$sql = "SELECT COUNT(*) AS Respuesta FROM encuesta WHERE Respuesta='Más de 10 veces al mes' AND WHERE ID_Preguntas='2-1'";
     /*$stmt = mysqli_stmt_init($conn);
     mysqli_stmt_prepare($stmt, $sql);
@@ -33,7 +34,7 @@
     //$twoONEichi = mysqli_fetch_assoc($result);
     //mysqli_stmt_close($stmt);
 
-    $sql = "SELECT COUNT(*) AS Respuesta FROM encuesta WHERE Respuesta='De 6 a 10 veces al mes' AND WHERE ID_Preguntas='2-1'";
+    //$sql = "SELECT COUNT(*) AS Respuesta FROM encuesta WHERE Respuesta='De 6 a 10 veces al mes' AND WHERE ID_Preguntas='2-1'";
     /*$stmt = mysqli_stmt_init($conn);
     mysqli_stmt_prepare($stmt, $sql);
 
@@ -47,7 +48,7 @@
     //$twoONEni = mysqli_fetch_assoc($result);
     //mysqli_stmt_close($stmt);
 
-    $sql = "SELECT COUNT(*) AS Respuesta FROM encuesta WHERE Respuesta='De 1 a 5 veces al mes' AND WHERE ID_Preguntas='2-1'";
+    //$sql = "SELECT COUNT(*) AS Respuesta FROM encuesta WHERE Respuesta='De 1 a 5 veces al mes' AND WHERE ID_Preguntas='2-1'";
     /*$stmt = mysqli_stmt_init($conn);
     mysqli_stmt_prepare($stmt, $sql);
 
@@ -61,7 +62,7 @@
     //$twoONEsan = mysqli_fetch_assoc($result);
     //mysqli_stmt_close($stmt);
 
-    $sql = "SELECT COUNT(*) AS Respuesta FROM encuesta WHERE Respuesta='1 vez cada varios meses' AND WHERE ID_Preguntas='2-1'";
+    //$sql = "SELECT COUNT(*) AS Respuesta FROM encuesta WHERE Respuesta='1 vez cada varios meses' AND WHERE ID_Preguntas='2-1'";
     /*$stmt = mysqli_stmt_init($conn);
     mysqli_stmt_prepare($stmt, $sql);
 
@@ -75,7 +76,7 @@
     //$twoONEyo = mysqli_fetch_assoc($result);
     //mysqli_stmt_close($stmt);
 
-    $sql = "SELECT COUNT(*) AS Respuesta FROM encuesta WHERE Respuesta='No realizaba compras en línea' AND WHERE ID_Preguntas='2-1'";
+    //$sql = "SELECT COUNT(*) AS Respuesta FROM encuesta WHERE Respuesta='No realizaba compras en línea' AND WHERE ID_Preguntas='2-1'";
     /*$stmt = mysqli_stmt_init($conn);
     mysqli_stmt_prepare($stmt, $sql);
 
@@ -113,21 +114,21 @@
     function drawTwoAChart() {
         var data = new google.visualization.arrayToDataTable([
             ['Categoría', 'Compras realizadas'],
-            ['Ropa', 8],
+            ['Ropa', 3],
             ['Comida a domicilio', 2],
-            ['Víveres a domicilio', 4],
+            ['Víveres a domicilio', 1],
             ['Muebles/electrodomésticos', 2],
-            ['Coleccionables', 8],
-            ['Libros', 6],
-            ['Computadoras y/o electrónicos', 5],
-            ['Ferretería', 3],
-            ['Entretenimiento', 8],
-            ['Aplicaciones', 7],
-            ['Reservaciones y boletos', 6],
-            ['Higiene', 5],
-            ['Deporte', 4],
-            ['Otros', 3],
-            ['Ninguno', 0]
+            ['Coleccionables', 3],
+            ['Libros', 1],
+            ['Computadoras y/o electrónicos', 4],
+            ['Ferretería', 0],
+            ['Entretenimiento', 4],
+            ['Aplicaciones', 0],
+            ['Reservaciones y boletos', 2],
+            ['Higiene', 1],
+            ['Deporte', 1],
+            ['Otros', 1],
+            ['Ninguno', 6]
         ]);
 
         var options = {
@@ -143,21 +144,21 @@
     function drawTwoBChart() {
         var data = new google.visualization.arrayToDataTable([
             ['Categoría', 'Compras realizadas'],
-            ['Ropa', 8],
+            ['Ropa', 3],
             ['Comida a domicilio', 2],
-            ['Víveres a domicilio', 4],
-            ['Muebles/electrodomésticos', 2],
-            ['Coleccionables', 8],
-            ['Libros', 6],
-            ['Computadoras y/o electrónicos', 5],
-            ['Ferretería', 3],
-            ['Entretenimiento', 8],
-            ['Aplicaciones', 7],
-            ['Reservaciones y boletos', 6],
-            ['Higiene', 5],
-            ['Deporte', 4],
+            ['Víveres a domicilio', 2],
+            ['Muebles/electrodomésticos', 4],
+            ['Coleccionables', 4],
+            ['Libros', 3],
+            ['Computadoras y/o electrónicos', 2],
+            ['Ferretería', 1],
+            ['Entretenimiento', 4],
+            ['Aplicaciones', 1],
+            ['Reservaciones y boletos', 1],
+            ['Higiene', 3],
+            ['Deporte', 2],
             ['Otros', 3],
-            ['Ninguno', 0]
+            ['Ninguno', 7]
         ]);
 
         var options = {
@@ -173,12 +174,12 @@
     function drawThreeChart() {
         var data = new google.visualization.arrayToDataTable([
             ['Gastos', 'Respuestas'],
-            ['Menos de $1,000 MXN', 8],
+            ['Menos de $1,000 MXN', 2],
             ['$1,000 - $2,500 MXN', 2],
-            ['$2,500 - $5,000 MXN', 4],
-            ['$5,000 - $7,500 MXN', 2],
-            ['$7,500 - $10,000 MXN', 8],
-            ['Más de $10,000 MXN', 6]
+            ['$2,500 - $5,000 MXN', 2],
+            ['$5,000 - $7,500 MXN', 3],
+            ['$7,500 - $10,000 MXN', 3],
+            ['Más de $10,000 MXN', 1]
         ]);
 
         var options = {
@@ -194,14 +195,14 @@
     function drawFourAChart() {
         var data = new google.visualization.arrayToDataTable([
             ['Plataforma', 'Respuestas'],
-            ['Mercado Libre', 8],
+            ['Mercado Libre', 2],
             ['Amazon', 2],
             ['Facebook Marketplace', 4],
             ['Alibaba/Aliexpress', 2],
-            ['eBay', 8],
-            ['E-shop/misma marca', 6],
-            ['Otros', 3],
-            ['N/A', 0]
+            ['eBay', 2],
+            ['E-shop/misma marca', 0],
+            ['Otros', 2],
+            ['N/A', 8]
         ]);
 
         var options = {
@@ -218,14 +219,14 @@
     function drawFourBChart() {
         var data = new google.visualization.arrayToDataTable([
             ['Plataforma', 'Respuestas'],
-            ['Mercado Libre', 8],
+            ['Mercado Libre', 3],
             ['Amazon', 2],
-            ['Facebook Marketplace', 4],
+            ['Facebook Marketplace', 2],
             ['Alibaba/Aliexpress', 2],
-            ['eBay', 8],
-            ['E-shop/misma marca', 6],
-            ['Otros', 3],
-            ['N/A', 0]
+            ['eBay', 3],
+            ['E-shop/misma marca', 2],
+            ['Otros', 2],
+            ['N/A', 6]
         ]);
 
         var options = {
@@ -242,15 +243,15 @@
     function drawFiveAChart() {
         var data = new google.visualization.arrayToDataTable([
             ['Método de pago', 'Respuestas'],
-            ['Tarjeta de crédito', 8],
-            ['Tarjeta de débito', 2],
-            ['Paypal', 4],
+            ['Tarjeta de crédito', 2],
+            ['Tarjeta de débito', 4],
+            ['Paypal', 3],
             ['Mercado Pago', 2],
-            ['Efectivo', 8],
-            ['Transferencia electrónica', 6],
-            ['Depósito en tiendas de conveniencia', 3],
-            ['Otro', 0],
-            ['N/A', 0]
+            ['Efectivo', 2],
+            ['Transferencia electrónica', 2],
+            ['Depósito en tiendas de conveniencia', 1],
+            ['Otro', 2],
+            ['N/A', 7]
         ]);
 
         var options = {
@@ -267,15 +268,15 @@
     function drawFiveBChart() {
         var data = new google.visualization.arrayToDataTable([
             ['Método de pago', 'Respuestas'],
-            ['Tarjeta de crédito', 8],
-            ['Tarjeta de débito', 2],
-            ['Paypal', 4],
-            ['Mercado Pago', 2],
-            ['Efectivo', 8],
-            ['Transferencia electrónica', 6],
-            ['Depósito en tiendas de conveniencia', 3],
-            ['Otro', 0],
-            ['N/A', 0]
+            ['Tarjeta de crédito', 3],
+            ['Tarjeta de débito', 3],
+            ['Paypal', 3],
+            ['Mercado Pago', 4],
+            ['Efectivo', 4],
+            ['Transferencia electrónica', 3],
+            ['Depósito en tiendas de conveniencia', 1],
+            ['Otro', 3],
+            ['N/A', 6]
         ]);
 
         var options = {
@@ -313,12 +314,12 @@
     google.charts.setOnLoadCallback(drawAStuff);
     function drawAStuff() {
         /*var jsonData = $.ajax({
-        url: "getdata.php",
+        url: "server/getdata.php",
         dataType: ".json",
         async: false
-        }).responseText;*/
+        });
 
-        //var data = new google.visualization.DataTable(jsonData);
+        var data = new google.visualization.DataTable(jsonData);*/
 
         /*a = $twoONEichi;
         b = $twoONEni;
@@ -326,16 +327,16 @@
         d = $twoONEyo;
         e = $twoONEgo;*/
 
-        var a =
-        <?php
-        $sql = "SELECT COUNT(*) AS Respuesta FROM encuesta WHERE Respuesta='Más de 10 veces al mes' AND WHERE ID_Preguntas='2-1'"; 
-        echo $sql
-        ?>;
-
+        
+        //
+        //$sql = "SELECT COUNT(*) AS Respuesta FROM encuesta WHERE Respuesta='Más de 10 veces al mes' AND WHERE ID_Preguntas='2-1'"; 
+        //echo $sql
+        //;
+        
         var data = new google.visualization.arrayToDataTable([
             ['','Respuestas'],
-            ["Más de 10 veces por mes", a],
-            ["10 a 6 veces al mes", 2],
+            ["Más de 10 veces por mes", 2],
+            ["10 a 6 veces al mes", 1],
             ["5 a 1 vez al mes", 3],
             ["1 vez cada varios meses", 4],
             ["No realizó compras en línea", 5],
@@ -366,11 +367,11 @@
     function drawBStuff() {
         var data = new google.visualization.arrayToDataTable([
             ['','Respuestas'],
-            ["Más de 10 veces por mes", 10],
+            ["Más de 10 veces por mes", 7],
             ["10 a 6 veces al mes", 6],
-            ["5 a 1 vez al mes", 7],
-            ["1 vez cada varios meses", 11],
-            ["No realizó compras en línea", 0],
+            ["5 a 1 vez al mes", 2],
+            ["1 vez cada varios meses", 1],
+            ["No realizó compras en línea", 1],
         ]);
 
         var options = {

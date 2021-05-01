@@ -2,68 +2,85 @@
     include_once 'dbm.php';
 
     $sql = "SELECT COUNT(*) AS total from encuesta WHERE Respuesta='Más de 10 veces al mes' AND WHERE ID_Preguntas='2-1'";
-    $stmt = mysqli_stmt_init($conn);
+    /*$stmt = mysqli_stmt_init($conn);
     mysqli_stmt_prepare($stmt, $sql);
 
     mysqli_stmt_execute($stmt);
 
-    $result = mysqli_stmt_get_result($stmt);
-
-    $twoONEichi = mysqli_fetch_assoc($result);
-    mysqli_stmt_close($stmt);
+    $result = mysqli_stmt_get_result($stmt);*/
+    $twoONEichi = $sql;
+    //$twoONEichi = mysqli_fetch_assoc($sql);
+    //mysqli_stmt_close($stmt);
 
     $sql = "SELECT COUNT(*) AS total from encuesta WHERE Respuesta='De 6 a 10 veces al mes' AND WHERE ID_Preguntas='2-1'";
-    $stmt = mysqli_stmt_init($conn);
+    /*$stmt = mysqli_stmt_init($conn);
     mysqli_stmt_prepare($stmt, $sql);
 
     mysqli_stmt_execute($stmt);
 
-    $result = mysqli_stmt_get_result($stmt);
-
-    $twoONEni = mysqli_fetch_assoc($result);
-    mysqli_stmt_close($stmt);
+    $result = mysqli_stmt_get_result($stmt);*/
+    $twoONEni = $sql;
+    //$twoONEni = mysqli_fetch_assoc($sql);
+    //mysqli_stmt_close($stmt);
 
     $sql = "SELECT COUNT(*) AS total from encuesta WHERE Respuesta='De 1 a 5 veces al mes' AND WHERE ID_Preguntas='2-1'";
-    $stmt = mysqli_stmt_init($conn);
+    /*$stmt = mysqli_stmt_init($conn);
     mysqli_stmt_prepare($stmt, $sql);
 
     mysqli_stmt_execute($stmt);
 
     $result = mysqli_stmt_get_result($stmt);
-
-    $twoONEsan = mysqli_fetch_assoc($result);
-    mysqli_stmt_close($stmt);
+    */
+    $twoONEsan = $sql;
+    //$twoONEsan = mysqli_fetch_assoc($sql);
+    //mysqli_stmt_close($stmt);
 
     $sql = "SELECT COUNT(*) AS total from encuesta WHERE Respuesta='1 vez cada varios meses' AND WHERE ID_Preguntas='2-1'";
-    $stmt = mysqli_stmt_init($conn);
+    /*$stmt = mysqli_stmt_init($conn);
     mysqli_stmt_prepare($stmt, $sql);
 
     mysqli_stmt_execute($stmt);
 
     $result = mysqli_stmt_get_result($stmt);
-
-    $twoONEyo = mysqli_fetch_assoc($result);
-    mysqli_stmt_close($stmt);
+    */
+    //$twoONEyo = mysqli_fetch_assoc($result);
+    $twoONEyo = $sql;
+    //mysqli_stmt_close($stmt);
 
     $sql = "SELECT COUNT(*) AS total from encuesta WHERE Respuesta='No realizaba compras en línea' AND WHERE ID_Preguntas='2-1'";
-    $stmt = mysqli_stmt_init($conn);
+    /*$stmt = mysqli_stmt_init($conn);
     mysqli_stmt_prepare($stmt, $sql);
 
     mysqli_stmt_execute($stmt);
 
     $result = mysqli_stmt_get_result($stmt);
+    */
+    //$twoONEgo = mysqli_fetch_assoc($result);
+    $twoONEgo = $sql;
+    //mysqli_stmt_close($stmt);
 
-    $twoONEgo = mysqli_fetch_assoc($result);
-    mysqli_stmt_close($stmt);
 
-
-    $data = [
+    /*$data = [
         "Más de 10 veces por mes" => $twoONEichi["total"],
         "10 a 6 veces al mes" => $twoONEni["total"],
         "5 a 1 vez al mes" => $twoONEsan["total"],
         "1 vez cada varios meses" => $twoONEyo["total"],
         "No realizó compras en línea" => $twoONEgo["total"]
     ];
+    $chartData = json_encode($data);*/
+
+    $data=array();
+    $data['cols']=array(array('label'=>'Opcion','type'=>'string'),array('label'=>'Respuestas','type'=>'number'));
+    $data['rows']=array(array('v'=>"Más de 10 veces por mes",'v'=>$twoONEichi),array('v'=>"10 a 6 veces al mes",'v'=>$twoONEni),array('v'=>"5 a 1 vez al mes",'v'=>$twoONEsan),array('v'=>"1 vez cada varios meses",'v'=>$twoONEyo),array('v'=>"No realizó compras en línea",'v'=>$twoONEgo));
+    /*$data = [ "cols" ["Opcion",
+        "Respuestas"
+        ], rows 
+        ["Más de 10 veces por mes" => $twoONEichi,
+        "10 a 6 veces al mes" => $twoONEni,
+        "5 a 1 vez al mes" => $twoONEsan,
+        "1 vez cada varios meses" => $twoONEyo,
+        "No realizó compras en línea" => $twoONEgo]
+    ]];*/
     $chartData = json_encode($data);
 
     /*$data = array();
