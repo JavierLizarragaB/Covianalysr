@@ -195,11 +195,11 @@
     function drawFourAChart() {
         var data = new google.visualization.arrayToDataTable([
             ['Plataforma', 'Respuestas'],
-            ['Mercado Libre', 2],
+            ['Mercado Libre', 1],
             ['Amazon', 2],
             ['Facebook Marketplace', 4],
             ['Alibaba/Aliexpress', 2],
-            ['eBay', 2],
+            ['eBay', 1],
             ['E-shop/misma marca', 0],
             ['Otros', 2],
             ['N/A', 8]
@@ -224,7 +224,7 @@
             ['Facebook Marketplace', 2],
             ['Alibaba/Aliexpress', 2],
             ['eBay', 3],
-            ['E-shop/misma marca', 2],
+            ['E-shop/misma marca', 0],
             ['Otros', 2],
             ['N/A', 6]
         ]);
